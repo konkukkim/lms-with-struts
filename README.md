@@ -89,6 +89,7 @@
           maxTotal="50"
           maxIdle="20"
           maxWaitMillis="-1" />
+```
 
 - web.xml 설정 (WEB-INF/web.xml)
 
@@ -99,7 +100,7 @@
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
 </resource-ref>
-
+```
 
 
 ### 2.2  docBase
