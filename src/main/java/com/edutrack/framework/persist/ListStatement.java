@@ -218,7 +218,7 @@ public class ListStatement extends SelectStatement {
           public void setSelect(String string)
           {
 			if(string == null) this.select = "";
-			else select = string.trim().toUpperCase();
+			else select = string.trim()/*.toUpperCase()*/;   // 운영에서 왜 에러 안나는지 모르겠다 2005-04-29
           }
 
           /**
