@@ -70,7 +70,8 @@
 
 ### 2.1 jndi
 `framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb`
-`
+
+```xml
     <!-- MySQL 데이터베이스 설정 -->
     <Resource name="jdbc/mydb"
               auth="Container"
@@ -83,8 +84,18 @@
               maxTotal="50"
               maxIdle="20"
               maxWaitMillis="-1" />
-`
+
 ( {CATALINA_HOME}/conf/context.xml )
+
+```xml
+    <resource-ref>
+        <description>MySQL Database</description>
+        <res-ref-name>jdbc/mydb</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+( WEB-INF/web.xml)
 
 ### 2.2  docBase
 '
