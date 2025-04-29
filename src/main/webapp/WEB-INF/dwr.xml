@@ -1,0 +1,441 @@
+<!DOCTYPE dwr PUBLIC
+        "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+        "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+    <allow>
+
+       <create creator="new" javascript="exampleService">
+                <param name="class" value="com.example.ExampleService"/>
+       </create>
+
+        <create creator="new" javascript="CommonUtilWork">
+            <param name="class" value="com.edutrack.common.CommonUtil"/>
+            <include method="getAuthorCheck"/>
+            <include method="getAuthorCheckAjax"/>
+        </create>
+
+        <create creator="new" javascript="BbsCommentWork">
+            <param name="class" value="com.edutrack.bbs.action.BbsCommentAction"/>
+            <include method="bbsCommentAutoList"/>
+            <include method="bbsCommentRegist"/>
+            <include method="bbsCommentDelete"/>
+            <include method="getCommentCount"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.bbs.dto.BbsCommentDTO"></convert>
+
+        <create creator="new" javascript="CommunitySubBoardWork">
+            <param name="class" value="com.edutrack.community.action.CommSubBoardAction"/>
+            <include method="subBoardListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.community.dto.CommBbsContentsDTO"></convert>
+
+
+        <create creator="new" javascript="CommBbsCommentWork">
+            <param name="class" value="com.edutrack.community.action.CommBbsCommentAction"/>
+            <include method="commBbsCommentList"/>
+            <include method="commBbsCommentRegist"/>
+            <include method="commBbsCommentDelete"/>
+            <include method="commBbsCommentCount"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.community.dto.CommBbsCommentDTO"></convert>
+
+        <create creator="new" javascript="BbsContentsListWork">
+            <param name="class" value="com.edutrack.bbs.action.BbsContentsAction"/>
+            <include method="bbsContentsListAuto"/>
+            <include method="confirmContentsPasswd"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.bbs.dto.BbsContentsDTO"></convert>
+
+        <create creator="new" javascript="CurriDateWriteWork">
+            <param name="class" value="com.edutrack.curridate.action.CurriDateAction"/>
+            <include method="checkHakgiTerm"/>
+        </create>
+
+        <create creator="new" javascript="CurriSubCourseStaticWork">
+            <param name="class" value="com.edutrack.connstatus.action.CurriSubStaticAction"/>
+            <include method="termSelectList"/>
+            <include method="curriSubCourseList"/>
+            <include method="courseStudentStaticList"/>
+            <include method="getCurriSubName"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.connstatus.dto.CurriSubStaticDTO"></convert>
+
+        <create creator="new" javascript="CurriSubStaticInfoWork">
+            <param name="class" value="com.edutrack.connstatus.action.CurriSubStaticAction"/>
+            <include method="cateSelectList"/>
+            <include method="termSelectList"/>
+            <include method="curriSubStaticInfo"/>
+            <include method="curriSubStatic"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.connstatus.dto.CurriSubStaticDTO"></convert>
+
+        <create creator="new" javascript="CurriBbsContentsWork">
+            <param name="class" value="com.edutrack.curribbs.action.CurriBbsContentsAction"/>
+            <include method="getCurriBbsContentsInfo"/>
+            <include method="bbsFileDelete"/>
+            <include method="getCurriBbsPageList"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.curribbs.dto.CurriBbsContentsDTO"></convert>
+
+        <create creator="new" javascript="CodeDaeWork">
+            <param name="class" value="com.edutrack.code.action.CodeDaeAction"/>
+            <include method="codeDaeCheck"/>
+            <include method="codeDaeInfo"/>
+            <include method="codeDaeRegist"/>
+            <include method="codeDaeListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.code.dto.CodeDaeDTO"></convert>
+
+        <create creator="new" javascript="CodeSoWork">
+            <param name="class" value="com.edutrack.code.action.CodeSoAction"/>
+            <include method="codeSoCheck"/>
+            <include method="codeSoInfo"/>
+            <include method="codeSoRegist"/>
+            <include method="codeSoListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.code.dto.CodeSoDTO"></convert>
+
+        <create creator="new" javascript="CourseWork">
+            <param name="class" value="com.edutrack.curritop.action.CourseAction"/>
+            <include method="courseIdCheck"/>
+            <include method="courseInfo"/>
+            <include method="courseImgDelete"/>
+            <include method="courseDelete"/>
+            <include method="courseRegist"/>
+            <include method="courseListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.curritop.dto.CourseDTO"></convert>
+
+        <create creator="new" javascript="ContentsWork">
+            <param name="class" value="com.edutrack.curritop.action.ContentsAction"/>
+            <include method="contentsInfo"/>
+            <include method="contentsRegist"/>
+            <include method="contentsListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.curritop.dto.ContentsDTO"></convert>
+
+        <create creator="new" javascript="CurriTopWork">
+            <param name="class" value="com.edutrack.curritop.action.CurriTopAction"/>
+            <include method="curriTopAutoList"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.curritop.dto.CurriTopDTO"></convert>
+
+        <create creator="new" javascript="CurriSubWork">
+            <param name="class" value="com.edutrack.currisub.action.CurriSubAction"/>
+            <include method="cateSelectList"/>
+            <include method="curriSelectList"/>
+            <include method="curriSubListAuto"/>
+            <include method="curriTermCheck"/>
+            <include method="currentSearchAuto"/>
+            <include method="completeMypageListAuto"/>
+            <include method="currentCurriContentsAutoList"/>
+        </create>
+
+        <create creator="new" javascript="CurriSubJogyoWork">
+            <param name="class" value="com.edutrack.currisub.action.CurriSubJogyoAction"/>
+            <include method="curriSubJogyoListAuto"/>
+            <include method="curriSubJogyoSelectAuto"/>
+            <include method="curriSubJogyoRegistAuto"/>
+            <include method="curriSubJogyoDelAuto"/>
+        </create>
+
+        <create creator="new" javascript="CurriContentsWork">
+            <param name="class" value="com.edutrack.currisub.action.CurriContentsAction"/>
+            <include method="curriContentsInfo"/>
+            <include method="curriContentsRegist"/>
+            <include method="curriContentsListAuto"/>
+            <include method="curriContentsAuto"/>
+            <include method="lecContentsListAuto"/>
+            <include method="courseInfo"/>
+            <include method="lecBookmarkEnd"/>
+            <include method="autoLecStudyStatus"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.currisub.dto.CurriContentsDTO"></convert>
+        <convert converter="bean" match="com.edutrack.currisub.dto.LecContentsDTO"></convert>
+
+        <create creator="new" javascript="CourseTeamWork">
+            <param name="class" value="com.edutrack.courseteam.action.CourseTeamAction"/>
+            <include method="courseTeamListAuto"/>
+            <include method="courseTeamRegist"/>
+            <include method="courseTeamMemListAuto"/>
+            <include method="teamMemberRegist"/>
+            <include method="teamMemberList"/>
+            <include method="courseStudentList"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.courseteam.dto.CourseTeamInfoDTO"></convert>
+        <convert converter="bean" match="com.edutrack.courseteam.dto.CourseTeamMemberDTO"></convert>
+
+        <create creator="new" javascript="CurriStudentWork">
+            <param name="class" value="com.edutrack.curristudent.action.CurriStudentAction"/>
+            <include method="confirmPassStudentListAjax"/>
+        </create>
+
+        <create creator="new" javascript="StudentWork">
+            <param name="class" value="com.edutrack.curristudent.action.StudentAction"/>
+            <include method="studentListAuto"/>
+            <include method="masterEnrollRegist"/>
+            <include method="checkConfirmAjax"/>
+        </create>
+
+        <create creator="new" javascript="UsersWork">
+            <param name="class" value="com.edutrack.user.action.UserAdminAction"/>
+            <include method="deptDaeSelectList"/>
+            <include method="deptSoSelectList"/>
+            <include method="userPagingListAuto"/>
+            <include method="userJuminNoCheckAjax"/>
+        </create>
+
+        <create creator="new" javascript="DeptDaeWork">
+            <param name="class" value="com.edutrack.dept.action.DeptDaeAction"/>
+            <include method="deptDaeCheck"/>
+            <include method="deptDaeInfo"/>
+            <include method="deptDaeRegist"/>
+            <include method="deptDaeListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.dept.dto.DeptDaeCodeDTO"></convert>
+
+        <create creator="new" javascript="DeptSoWork">
+            <param name="class" value="com.edutrack.dept.action.DeptSoAction"/>
+            <include method="deptSoCheck"/>
+            <include method="deptSoInfo"/>
+            <include method="deptSoRegist"/>
+            <include method="deptSoListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.dept.dto.DeptSoCodeDTO"></convert>
+
+        <create creator="new" javascript="CurriBbsCommentWork">
+            <param name="class" value="com.edutrack.curribbs.action.CurriBbsCommentAction"/>
+            <include method="curriBbsCommentList"/>
+            <include method="curriBbsCommentRegist"/>
+            <include method="curriBbsCommentDelete"/>
+            <include method="curriBbsCommentCount"/>
+
+        </create>
+        <convert converter="bean" match="com.edutrack.curribbs.dto.CurriBbsCommentDTO"></convert>
+
+        <create creator="new" javascript="CourseForumWork">
+            <param name="class" value="com.edutrack.courseforum.action.CourseForumInfoAction"/>
+            <include method="courseForumInfoListAuto"/>
+            <include method="courseForumInfoRegistAjax"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.courseforum.dto.CourseForumInfoDTO"></convert>
+
+        <create creator="new" javascript="CourseForumTeamWork">
+            <param name="class" value="com.edutrack.courseforum.action.CourseForumTeamAction"/>
+            <include method="courseForumTeamListAuto"/>
+            <include method="courseForumStudentList"/>
+            <include method="courseForumTeamMemberList"/>
+            <include method="courseForumTeamMemberRegist"/>
+        </create>
+
+        <create creator="new" javascript="CourseForumContentsWork">
+            <param name="class" value="com.edutrack.courseforum.action.CourseForumContentsAction"/>
+            <include method="courseForumContentsPagingListAjax"/>
+            <include method="courseForumContentsDeleteAjax"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.courseforum.dto.CourseForumContentsDTO"></convert>
+
+        <create creator="new" javascript="CourseForumCommentWork">
+            <param name="class" value="com.edutrack.courseforum.action.CourseForumCommentAction"/>
+            <include method="courseForumCommentRegist"/>
+            <include method="courseForumCommentPagingListAjax"/>
+            <include method="courseForumCommentDelete"/>
+            <include method="publishForumCommentRegist"/>
+            <include method="publishForumCommentPagingListAjax"/>
+            <include method="publishForumCommentDelete"/>
+            <include method="getForumCommentCount"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.courseforum.dto.CourseForumCommentDTO"></convert>
+
+        <create creator="new" javascript="ProgMenuListWork">
+            <param name="class" value="com.edutrack.progauthor.action.ProgMenuAction"/>
+            <include method="progMenuOrderRegist"/>
+            <include method="progMenuMasterList"/>
+            <include method="progMenuCopy"/>
+            <include method="progMenuDelete"/>
+            <include method="progMenuListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.progauthor.dto.ProgMenuDTO"></convert>
+
+
+
+        <create creator="new" javascript="QuizWork">
+            <param name="class" value="com.edutrack.curritop.action.QuizAction"/>
+            <include method="quizConfigContentsRegist"/>
+            <include method="quizConfigContentsWrite"/>
+            <include method="quizFileDelete"/>
+        </create>
+
+        <create creator="new" javascript="CurriQuizWork">
+            <param name="class" value="com.edutrack.currisub.action.CurriQuizAction"/>
+            <include method="curriQuizConfigContentsRegist"/>
+            <include method="curriQuizConfigContentsWrite"/>
+            <include method="curriQuizFileDelete"/>
+            <include method="curriQuizAuto"/>
+        </create>
+
+        <create creator="new" javascript="CurriSubCoursePlanWork">
+            <param name="class" value="com.edutrack.currisub.action.CurriSubCoursePlanAction"/>
+            <include method="curriSubCoursePlanRegist"/>
+            <include method="curriSubCoursePlanShowAuto"/>
+            <include method="curriSubCoursePlanEdit"/>
+            <include method="planFileDelete"/>
+            <include method="profInfo"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.currisub.dto.CurriSubCoursePlanDTO"></convert>
+        <convert converter="bean" match="com.edutrack.user.dto.ProfInfoDTO"></convert>
+
+        <create creator="new" javascript="CurriSubCourseWork">
+            <param name="class" value="com.edutrack.currisub.action.CurriSubCourseAction"/>
+            <include method="curriSubCourseInfo"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.currisub.dto.CurriSubCourseDTO"></convert>
+
+        <create creator="new" javascript="ExamBankWork">
+            <param name="class" value="com.edutrack.courseexam.action.ExamBankAction"/>
+            <include method="examBankInfoSelectList"/>
+            <include method="examBankInfoRegist"/>
+            <include method="examBankContentsListAuto"/>
+            <include method="examBankContentsFileDelete"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.courseexam.dto.ExamBkContentsDTO"></convert>
+
+        <create creator="new" javascript="ExamContentsWork">
+            <param name="class" value="com.edutrack.courseexam.action.ExamContentsAction"/>
+            <include method="examContentsFileDelete"/>
+        </create>
+
+
+        <create creator="new" javascript="ResearchBankWork">
+            <param name="class" value="com.edutrack.curriresearch.action.ResearchBankAction"/>
+            <include method="researchBankInfoSelectList"/>
+            <include method="researchBankInfoRegist"/>
+            <include method="researchBankInfo"/>
+            <include method="researchBankContentsListAuto"/>
+            <include method="researchBankContentsInfo"/>
+            <include method="researchBankContentsRegist"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.curriresearch.dto.ResBkContentsDTO"></convert>
+        <convert converter="bean" match="com.edutrack.curriresearch.dto.ResBkInfoDTO"></convert>
+
+        <create creator="new" javascript="ResearchContentsWork">
+            <param name="class" value="com.edutrack.curriresearch.action.ResearchContentsAction"/>
+            <include method="researchContentsListAuto"/>
+            <include method="researchContentsInfo"/>
+            <include method="researchContentsRegist"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.curriresearch.dto.CurriResContentsDTO"></convert>
+
+
+        <create creator="new" javascript="OfflineAttendWork">
+            <param name="class" value="com.edutrack.offlineattend.action.OfflineAttendAction"/>
+            <include method="offlineAttendAllRegist"/>
+            <include method="offlineAttendListAuto"/>
+        </create>
+
+        <create creator="new" javascript="ResultCourseWork">
+            <param name="class" value="com.edutrack.resultcourse.action.ResultCourseAction"/>
+            <include method="resultCourseListAuto"/>
+            <include method="resultCourseStTotalShowAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.resultcourse.dto.ResultCourseDTO"></convert>
+
+
+        <create creator="new" javascript="ScoreGradeWork">
+            <param name="class" value="com.edutrack.score.action.ScoreGradeAction"/>
+            <include method="scoreGradeListAuto"/>
+            <include method="scoreGradeDeleteAjax"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.score.dto.ScoreGradeDTO"></convert>
+
+        <create creator="new" javascript="MainWork">
+            <param name="class" value="com.edutrack.main.action.MainAction"/>
+            <include method="stuCurriListAuto"/>
+        </create>
+
+        <create creator="new" javascript="ReportBankWork">
+            <param name="class" value="com.edutrack.coursereport.action.ReportBankAction"/>
+            <include method="reportBankInfoSelectList"/>
+            <include method="reportBankInfoRegist"/>
+            <include method="reportBankContentsListAuto"/>
+            <include method="reportBankContentsFileDelete"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.coursereport.dto.ReportBankContentsDTO"></convert>
+
+        <create creator="new" javascript="ReportSubInfoWork">
+            <param name="class" value="com.edutrack.coursereport.action.ReportSubInfoAction"/>
+            <include method="reportSubInfoListAuto"/>
+            <include method="reportSubInfoFileDelete"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.coursereport.dto.ReportSubInfoDTO"></convert>
+
+        <create creator="new" javascript="ReportSendWork">
+            <param name="class" value="com.edutrack.coursereport.action.ReportResultAction"/>
+            <include method="reportSendFileDelete"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.coursereport.dto.ReportSendDTO"></convert>
+
+        <create creator="new" javascript="ReportContentsWork">
+            <param name="class" value="com.edutrack.coursereport.action.ReportContentsAction"/>
+            <include method="reportContentsFileDelete"/>
+        </create>
+
+        <create creator="new" javascript="ReportAdminWork">
+            <param name="class" value="com.edutrack.coursereport.action.ReportAdminAction"/>
+            <include method="reportListAuto"/>
+            <include method="reportStListAuto"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.coursereport.dto.ReportInfoDTO"></convert>
+
+        <create creator="new" javascript="CompanyMasterCourseWork">
+            <param name="class" value="com.edutrack.currisub.action.CompanyMasterCourseAction"/>
+            <include method="autoCompanyMasterCurriList"/>
+            <include method="getCompanySelectCourseList"/>
+            <include method="getCompanyStudentCurriInfo"/>
+            <include method="autoDeptUserList"/>
+            <include method="autoDeptStuCurriInfoList"/>
+        </create>
+
+        <create creator="new" javascript="ExamAdminWork">
+            <param name="class" value="com.edutrack.courseexam.action.ExamAdminAction"/>
+            <include method="examListAuto"/>
+        </create>
+
+        <create creator="new" javascript="ExamResultWork">
+            <param name="class" value="com.edutrack.courseexam.action.ExamResultAction"/>
+            <include method="examResultAutoList"/>
+        </create>
+
+        <convert converter="bean" match="com.edutrack.common.dto.CodeDTO"></convert>
+        <convert converter="bean" match="com.edutrack.currisub.dto.CurriSubDTO"></convert>
+        <convert converter="bean" match="com.edutrack.curristudent.dto.StudentDTO"></convert>
+        <convert converter="bean" match="com.edutrack.courseexam.dto.ExamInfoDTO"></convert>
+
+
+        <create creator="new" javascript="PublishCurriSubWork">
+            <param name="class" value="com.edutrack.currisub.action.PublishCurriSubAction"/>
+            <include method="publishCurriSubPageAutoList"/>
+            <include method="lecContentsListAuto"/>
+            <include method="courseForumContentsAutoList"/>
+            <include method="publishForumContentsPassChkForm"/>
+            <include method="publishForumCommentPassChkForm"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.currisub.dto.LecContentsDTO"></convert>
+
+
+        <create creator="new" javascript="RecommendSiteWork">
+            <param name="class" value="com.edutrack.recommendsite.action.RecommendSiteAction"/>
+            <include method="recommendSiteListAuto"/>
+            <include method="recommendSiteRegistAjax"/>
+            <include method="recommendSiteDeleteAjax"/>
+            <include method="recommendSiteTwoDepthAjax"/>
+        </create>
+        <convert converter="bean" match="com.edutrack.recommendsite.dto.RecommendSiteDTO"></convert>
+
+
+
+        <convert converter="bean" match="com.edutrack.user.dto.UsersDTO"></convert>
+        <convert converter="bean" match="com.edutrack.framework.persist.AjaxListDTO"></convert>
+    </allow>
+</dwr>

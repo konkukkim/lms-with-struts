@@ -1,0 +1,10 @@
+<html>
+<title></title>
+<head>
+<Script>
+parent.autoReloadPopupCallback();
+</Script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,22 @@
+a:link  {color:#000000; text-decoration: none;}
+a:visited {color:#000000; text-decoration: none;}
+a:active  {color:#000000; text-decoration: none;}
+a:hover   {color:#000000; text-decoration: underline;}
+
+.txt1{font-size:11pt;font-family:dotum,gulim,utum;color:#282828;line-height:1.5;font-weight:bold;}	
+.txt2{font-size:11pt;font-family:dotum,gulim,utum;color:#282828;line-height:1.5;}
+.txt3{font-size:10pt;font-family:gulim,dotum,utum;color:#FFFF80;line-height:1.5;}
+.txt4{font-size:9pt;font-family:gulim,dotum,utum;color:#444444;}
+.txt5{font-size:10pt;font-family:gulim,dotum,utum;color:#6D5712;line-height:1.5;font-weight:bold;}
+.txt6{font-size:9pt;font-family:gulim,dotum,utum;color:#D20606;font-weight:bold;}
+.txt7{font-size:9pt;font-family:gulim,dotum,utum;color:#505050;line-height:1.8;font-weight:bold;}
+.txt8{font-size:9pt;font-family:gulim,dotum,utum;color:#0E396D;line-height:1.5;}
+.txt9{font-size:9pt;font-family:gulim,dotum,utum;color:#796528;line-height:1.5;}
+
+.copy{font-size:9pt;font-family:gulim,dotum,utum;color:#796528;}
+.input1{BACKGROUND-COLOR: #FBF4D8; font-size:10pt; BORDER-BOTTOM: #555555 1px solid;BORDER-LEFT: #555555 1px solid;BORDER-RIGHT: #555555 1px solid;BORDER-TOP: black 1px solid;COLOR: #555555;}
+.table1{BACKGROUND-COLOR: #ffffff;BORDER-BOTTOM: #484848 1px solid;BORDER-LEFT: #8A8A8A 1px solid;BORDER-RIGHT: #8A8A8A 1px solid;BORDER-TOP: #8A8A8A 1px solid;COLOR: #8A8A8A;}
+.table2{BACKGROUND-COLOR: #ffffff;BORDER-BOTTOM: #CECECE 1px solid;BORDER-LEFT: #CECECE 1px solid;BORDER-RIGHT: #CECECE 1px solid;BORDER-TOP: #CECECE 1px solid;COLOR: #CECECE;}
+.td1{BACKGROUND-COLOR: #E8E8E8;font-size:10pt;font-family:dotum,gulim,utum;color:#2D5500;line-height:1.5;}
+.td2{BACKGROUND-COLOR: #F8F8F8;font-size:10pt;font-family:dotum,gulim,utum;color:#3C6916;line-height:1.5;}
+.td3{BACKGROUND-COLOR: #FBF4D8;font-size:10pt;font-family:dotum,gulim,utum;color:#000000;line-height:1.5;}

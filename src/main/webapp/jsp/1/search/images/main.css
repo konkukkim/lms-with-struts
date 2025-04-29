@@ -1,0 +1,93 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #ffffff; MARGIN: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #949294; SCROLLBAR-ARROW-COLOR: #949294; SCROLLBAR-TRACK-COLOR: #efeeee; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #444444; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #444444; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: underline
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #444444; LINE-HEIGHT: 16px; FONT-FAMILY: "µ¸¿ò"
+}
+.menu {
+	FONT-SIZE: 12px; COLOR: #292323; FONT-FAMILY: "µ¸¿ò"
+}
+.menu A:link {
+	FONT-SIZE: 12px; COLOR: #292323; FONT-FAMILY: "µ¸¿ò"
+}
+.menu A:visited {
+	FONT-SIZE: 12px; COLOR: #292323; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+.menu A:hover {
+	FONT-SIZE: 12px; COLOR: #bc4b3a; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+.ext {
+	FONT-SIZE: 12px; COLOR: #292323; FONT-FAMILY: "µ¸¿ò"
+}
+.ext A:link {
+	FONT-SIZE: 12px; COLOR: #376e0c; FONT-FAMILY: "µ¸¿ò"
+}
+.ext A:visited {
+	FONT-SIZE: 12px; COLOR: #376e0c; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+.ext A:hover {
+	FONT-SIZE: 12px; COLOR: #376e0c; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: underline
+}
+.txt_green {
+	COLOR: #10475b
+}
+.title_tx {
+	FONT-SIZE: 17px; COLOR: #292323; FONT-FAMILY: "µ¸¿ò"
+}
+.tit_main {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff
+}
+.sm_tx {
+	FONT-SIZE: 11px; COLOR: #777777; FONT-FAMILY: "µ¸¿ò"
+}
+.sm_tx A:link {
+	FONT-SIZE: 11px; COLOR: #777777; FONT-FAMILY: "µ¸¿ò"
+}
+.sm_tx A:visited {
+	FONT-SIZE: 11px; COLOR: #777777; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+.sm_tx A:hover {
+	FONT-SIZE: 11px; COLOR: #bc4b3a; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none
+}
+.form01 {
+	FONT-SIZE: 12px; COLOR: #444444; LINE-HEIGHT: 16px; FONT-FAMILY: "µ¸¿ò"
+}
+.box_gray {
+	BORDER-RIGHT: #d1cfcf 1px solid; BORDER-TOP: #d1cfcf 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #d1cfcf 1px solid; COLOR: #666666; BORDER-BOTTOM: #d1cfcf 1px solid; FONT-FAMILY: "µ¸À½", "Arial", "Verdana"; BACKGROUND-COLOR: #f8f8f8
+}
+.box_main {
+	BORDER-RIGHT: #e6e6e6 1px solid; BORDER-TOP: #e6e6e6 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #e6e6e6 1px solid; COLOR: #666666; BORDER-BOTTOM: #e6e6e6 1px solid; FONT-FAMILY: "µ¸À½", "Arial", "Verdana"; BACKGROUND-COLOR: #ffffff
+}
+.box_blue {
+	BORDER-RIGHT: #b3c6d3 1px solid; BORDER-TOP: #b3c6d3 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #b3c6d3 1px solid; COLOR: #666666; BORDER-BOTTOM: #b3c6d3 1px solid; FONT-FAMILY: "µ¸À½", "Arial", "Verdana"; BACKGROUND-COLOR: #ffffff
+}
+.td_spec {
+	FONT-SIZE: 12px; COLOR: #444444; LINE-HEIGHT: 25px; FONT-FAMILY: "µ¸¿ò"
+}
+.td_spec2 {
+	FONT-SIZE: 12px; COLOR: #444444; LINE-HEIGHT: 20px; FONT-FAMILY: "µ¸¿ò"
+}
+.blue {
+	COLOR: #2e75a3
+}
+A.blue:link {
+	COLOR: #2e75a3
+}
+A.blue:visited {
+	COLOR: #2e75a3
+}
+A.blue:hover {
+	COLOR: #2e75a3
+}
+A.blue:active {
+	COLOR: #2e75a3
+}

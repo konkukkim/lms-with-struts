@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+    "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean name="helloWorldForm" type="com.example.form.HelloWorldForm" />
+        <form-bean name="dbTestForm" type="com.example.form.DBTestForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <action path="/helloWorld" type="com.example.action.HelloWorldAction" name="helloWorldForm">
+            <forward name="success" path="/helloWorld.jsp" />
+        </action>
+
+        <action path="/dbTest" type="com.example.action.DBTestAction" name="dbTestForm" scope="request" validate="false">
+            <forward name="success" path="/dbTestResult.jsp"/>
+        </action>
+
+        <action type="com.edutrack.sample.action.LoginAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Login">
+        </action>
+        <action type="com.edutrack.main.action.MainAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Main">
+        </action>
+
+        <action type="com.edutrack.currisub.action.CompanyMasterCourseAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CompanyMasterCourse">
+        </action>
+
+        <action type="com.edutrack.bbs.action.BbsInfoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/BbsInfo">
+        </action>
+        <action type="com.edutrack.bbs.action.BbsContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/BbsContents">
+        </action>
+        <action type="com.edutrack.bbs.action.BbsCommentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/BbsComment">
+        </action>
+
+
+        <action type="com.edutrack.code.action.CodeDaeAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CodeDae">
+        </action>
+        <action type="com.edutrack.code.action.CodeSoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CodeSo">
+        </action>
+
+        <action type="com.edutrack.main.action.LectureMainAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/LectureMain">
+        </action>
+        <action type="com.edutrack.common.action.CommonAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Common">
+        </action>
+        <action type="com.edutrack.common.action.CommonMailAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Mail">
+        </action>
+
+
+        <action type="com.edutrack.config.action.ConfigSubAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ConfigSub">
+        </action>
+        <action type="com.edutrack.progauthor.action.ProgAuthorAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ProgAuthor">
+        </action>
+        <action type="com.edutrack.progauthor.action.ProgMenuAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ProgMenu">
+        </action>
+        <action type="com.edutrack.website.action.WebSiteAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/WebSite">
+        </action>
+
+        <action type="com.edutrack.connstatus.action.ConnstatusAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ConnStatus">
+        </action>
+
+        <action type="com.edutrack.courseexam.action.ExamAdminAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ExamAdmin">
+        </action>
+        <action type="com.edutrack.courseexam.action.ExamContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ExamContents">
+        </action>
+        <action type="com.edutrack.courseexam.action.ExamAnswerAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ExamAnswer">
+        </action>
+        <action type="com.edutrack.courseexam.action.ExamResultAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ExamResult">
+        </action>
+        <action type="com.edutrack.courseexam.action.ExamBankAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ExamBank">
+        </action>
+
+        <action type="com.edutrack.courseforum.action.CourseForumInfoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CourseForumInfo">
+        </action>
+        <action type="com.edutrack.courseforum.action.CourseForumUserAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CourseForumUser">
+        </action>
+        <action type="com.edutrack.courseforum.action.CourseForumContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CourseForumContents">
+        </action>
+        <action type="com.edutrack.courseforum.action.CourseForumCommentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CourseForumComment">
+        </action>
+        <action type="com.edutrack.courseforum.action.CourseForumTeamAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CourseForumTeam">
+        </action>
+
+        <action type="com.edutrack.courseteam.action.CourseTeamAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CourseTeam">
+        </action>
+
+        <action type="com.edutrack.curribbs.action.CurriBbsInfoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriBbsInfo">
+        </action>
+        <action type="com.edutrack.curribbs.action.CurriBbsContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriBbsContents">
+        </action>
+        <action type="com.edutrack.curribbs.action.CurriBbsCommentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriBbsComment">
+        </action>
+        <action type="com.edutrack.curribbs.action.CurriWorkReqResAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriWorkReqRes">
+        </action>
+
+        <action type="com.edutrack.curriresearch.action.ResearchInfoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ResearchInfo">
+        </action>
+        <action type="com.edutrack.curriresearch.action.ResearchContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ResearchContents">
+        </action>
+        <action type="com.edutrack.curriresearch.action.ResearchAnswerAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ResearchAnswer">
+        </action>
+        <action type="com.edutrack.curriresearch.action.ResearchResultAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ResearchResult">
+        </action>
+        <action type="com.edutrack.curriresearch.action.ResearchBankAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ResearchBank">
+        </action>
+
+        <action type="com.edutrack.curristudent.action.StudentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Student">
+        </action>
+        <action type="com.edutrack.curristudent.action.CurriStudentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriStudent">
+        </action>
+
+        <action type="com.edutrack.currisub.action.CurriSubAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriSub">
+        </action>
+        <action type="com.edutrack.currisub.action.CurriSubCourseAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriSubCourse">
+        </action>
+        <action type="com.edutrack.currisub.action.CurriContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriContents">
+        </action>
+        <action type="com.edutrack.currisub.action.CurriQuizAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriQuiz">
+        </action>
+        <action type="com.edutrack.currisub.action.ScormStudyAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ScormStudy">
+        </action>
+        <action type="com.edutrack.currisub.action.CurriSubSortAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriSort">
+        </action>
+        <action type="com.edutrack.currisub.action.CurriSubCoursePlanAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriSubCoursePlan">
+        </action>
+
+        <action type="com.edutrack.curritop.action.CurriCategoryAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriCategory">
+        </action>
+        <action type="com.edutrack.curritop.action.CurriTopAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriTop">
+        </action>
+        <action type="com.edutrack.curritop.action.CourseAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Course">
+        </action>
+        <action type="com.edutrack.curritop.action.CurriTopCourseAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriTopCourse">
+        </action>
+        <action type="com.edutrack.curritop.action.ContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Contents">
+        </action>
+        <action type="com.edutrack.curritop.action.QuizAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Quiz">
+        </action>
+        <action type="com.edutrack.curritop.action.CurriRecommendAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriRecommend">
+        </action>
+
+        <action type="com.edutrack.dept.action.DeptDaeAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/DeptDae">
+        </action>
+        <action type="com.edutrack.dept.action.DeptSoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/DeptSo">
+        </action>
+        <action type="com.edutrack.dept.action.DeptAdminAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/DeptAdmin">
+        </action>
+
+        <action type="com.edutrack.eventquiz.action.EventQuizAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/EventQuiz">
+        </action>
+
+        <action type="com.edutrack.faq.action.FaqAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Faq">
+        </action>
+        <action type="com.edutrack.message.action.MessageAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Message">
+        </action>
+        <action type="com.edutrack.message.action.PopMessageAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/PopMessage">
+        </action>
+
+        <action type="com.edutrack.moviehistory.action.MovieHistoryAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/MovieHistory">
+        </action>
+
+        <action type="com.edutrack.onlinequiz.action.OnlineQuizAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/OnlineQuiz">
+        </action>
+
+        <action type="com.edutrack.payment.action.PaymentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Payment">
+        </action>
+
+        <action type="com.edutrack.poll.action.InternetPollAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Poll">
+        </action>
+
+        <action type="com.edutrack.popupnotice.action.PopupNoticeAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/PopupNotice">
+        </action>
+
+        <action type="com.edutrack.resultcourse.action.ResultCourseAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ResultCourse">
+        </action>
+
+        <action type="com.edutrack.schedule.action.ScheduleAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Schedule">
+        </action>
+
+        <action type="com.edutrack.selftest.action.SelfTestInfoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/SelfTestInfo">
+        </action>
+        <action type="com.edutrack.selftest.action.SelfTestContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/SelfTestContents">
+        </action>
+        <action type="com.edutrack.selftest.action.SelfTestAnswerAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/SelfTestAnswer">
+        </action>
+        <action type="com.edutrack.selftest.action.SelfTestResultAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/SelfTestResult">
+        </action>
+
+        <action type="com.edutrack.totalpayment.action.TotalPaymentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/TotalPayment">
+        </action>
+
+        <action type="com.edutrack.user.action.UserAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/User">
+        </action>
+        <action type="com.edutrack.user.action.UserAdminAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/UserAdmin">
+        </action>
+
+        <action type="com.edutrack.bbsmanagement.action.BbsManagementAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/BbsManagement">
+        </action>
+
+        <action type="com.edutrack.community.action.CommCategoryAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CommCategory">
+        </action>
+
+        <action type="com.edutrack.community.action.CommunityAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/Community">
+        </action>
+
+        <action type="com.edutrack.community.action.CommSubBoardAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CommSubBoard">
+        </action>
+
+        <action type="com.edutrack.community.action.CommPrideCommentAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CommPrideComment">
+        </action>
+
+        <action type="com.edutrack.community.action.CommManageAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CommManage">
+        </action>
+
+        <action type="com.edutrack.community.action.CommInviteAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CommInvite">
+        </action>
+
+        <action type="com.edutrack.curridate.action.CurriDateAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriDate">
+        </action>
+        <action type="com.edutrack.connstatus.action.CurriSubStaticAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/CurriSubStatic">
+        </action>
+        <action type="com.edutrack.offlineattend.action.OfflineAttendAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/OfflineAttend">
+        </action>
+        <action type="com.edutrack.score.action.ScoreGradeAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ScoreGrade">
+        </action>
+
+        <action type="com.edutrack.coursereport.action.ReportAdminAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportAdmin">
+        </action>
+        <action type="com.edutrack.coursereport.action.ReportContentsAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportContents">
+        </action>
+        <action type="com.edutrack.coursereport.action.ReportAnswerAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportAnswer">
+        </action>
+        <action type="com.edutrack.coursereport.action.ReportResultAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportResult">
+        </action>
+        <action type="com.edutrack.coursereport.action.ReportBankAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportBank">
+        </action>
+        <action type="com.edutrack.coursereport.action.ReportSubInfoAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportSubInfo">
+        </action>
+        <action type="com.edutrack.coursereport.action.ReportSendAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/ReportSend">
+        </action>
+        <action type="com.edutrack.curritop.action.WebTreeEszAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/WebTreeEsz">
+        </action>
+        <action type="com.edutrack.currisub.action.PublishCurriSubAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/PublishCurriSub">
+        </action>
+        <action type="com.edutrack.recommendsite.action.RecommendSiteAction"
+                validate="false"
+                parameter="cmd"
+                scope="request"
+                path="/RecommendSite">
+        </action>
+
+
+    </action-mappings>
+
+</struts-config>
+

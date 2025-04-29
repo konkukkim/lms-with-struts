@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DWR Example</title>
+    <script src="/dwr/engine.js"></script>
+    <script src="/dwr/interface/exampleService.js"></script>
+    <script>
+        function sayHello() {
+            const name = document.getElementById("nameInput").value;
+            exampleService.greet(name, {
+                callback: function(response) {
+                    document.getElementById("result").innerText = response;
+                },
+                errorHandler: function(error) {
+                    console.error("Error: ", error);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<h1>DWR Struts Example</h1>
+
+<input type="text" id="nameInput" placeholder="enter your name plz" />
+<button onclick="sayHello()">Greet</button>
+<p id="result"></p>
+<a href="helloWorld.do"> struts test</a><br>
+<a href="jndi.jsp"> jndi  test(jsp)</a><br>
+<a href="dbTest.do"> jndi dbcp test(struts)</a><br>
+
+</body>
+</html>
