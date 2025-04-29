@@ -68,34 +68,39 @@
 
 ## 2. 포팅 때 할일
 
-### 2.1 jndi
-`framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb`
+### 2.1 JNDI 설정
+
+- JNDI 리소스 이름 설정 (`./src/main/webapp/WEB-INF/config/framework.properties`)
+`framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb'
+
+
+- Tomcat JNDI 리소스 등록 (`{CATALINA_HOME}/conf/context.xml`)
 
 ```xml
-    <!-- MySQL 데이터베이스 설정 -->
-    <Resource name="jdbc/mydb"
-              auth="Container"
-              type="javax.sql.DataSource"
-              driverClassName="com.mysql.jdbc.Driver"
-              factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-              url="jdbc:mysql://localhost:3306/junnodae"
-              username="root"
-              password="1234"
-              maxTotal="50"
-              maxIdle="20"
-              maxWaitMillis="-1" />
+<!-- MySQL 데이터베이스 설정 -->
+<Resource name="jdbc/mydb"
+          auth="Container"
+          type="javax.sql.DataSource"
+          driverClassName="com.mysql.jdbc.Driver"
+          factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+          url="jdbc:mysql://localhost:3306/junnodae"
+          username="root"
+          password="1234"
+          maxTotal="50"
+          maxIdle="20"
+          maxWaitMillis="-1" />
 
-( {CATALINA_HOME}/conf/context.xml )
+- web.xml 설정 (WEB-INF/web.xml)
 
 ```xml
-    <resource-ref>
-        <description>MySQL Database</description>
-        <res-ref-name>jdbc/mydb</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-    </resource-ref>
+<resource-ref>
+    <description>MySQL Database</description>
+    <res-ref-name>jdbc/mydb</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+</resource-ref>
 
-( WEB-INF/web.xml)
+
 
 ### 2.2  docBase
 '
