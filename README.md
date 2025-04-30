@@ -20,11 +20,11 @@
    2. [범위](#12-범위)
    3. [용어 정의](#13-용어-정의)
    4. [참조 문서](#14-참조-문서)
-2. [포팅 때 할일](#2-아키텍처-개요)
-   1. [JNDI 설정](#21-JNDI-설정)
-   2. [ docBase](#22-아키텍처-원칙)
-   3. [framework.properties 위치 지정](#23-핵심-비즈니스-요구사항)
-   4. [주요 기술 스택](#24-주요-기술-스택)
+2. [포팅 때 할일](#2-포팅-때-할일)
+   1. [jndi](#21-jndi)
+   2. [docBase](#22-docBase)
+   3. [framework.properties 위치 지정](#23-framework.properties-위치-지정)
+   4. [log4j설정](#24-log4j설정)
 3. [시스템 아키텍처](#3-시스템-아키텍처)
    1. [전체 시스템 구조](#31-전체-시스템-구조)
    2. [계층 구조](#32-계층-구조)
@@ -68,42 +68,25 @@
 
 ## 2. 포팅 때 할일
 
-### 2.1 JNDI 설정
+### 2.1 jndi
+`framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb`
+`
+    <!-- MySQL 데이터베이스 설정 -->
+    <Resource name="jdbc/mydb"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.jdbc.Driver"
+              factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+              url="jdbc:mysql://localhost:3306/junnodae"
+              username="root"
+              password="1234"
+              maxTotal="50"
+              maxIdle="20"
+              maxWaitMillis="-1" />
+`
+( {CATALINA_HOME}/conf/context.xml )
 
-- JNDI 리소스 이름 설정 (`./src/main/webapp/WEB-INF/config/framework.properties`)
-`framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb'
-
-
-- Tomcat JNDI 리소스 등록 (`{CATALINA_HOME}/conf/context.xml`)
-
-```xml
-<!-- MySQL 데이터베이스 설정 -->
-<Resource name="jdbc/mydb"
-          auth="Container"
-          type="javax.sql.DataSource"
-          driverClassName="com.mysql.jdbc.Driver"
-          factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-          url="jdbc:mysql://localhost:3306/junnodae"
-          username="root"
-          password="1234"
-          maxTotal="50"
-          maxIdle="20"
-          maxWaitMillis="-1" />
-```
-
-- web.xml 설정 (WEB-INF/web.xml)
-
-```xml
-<resource-ref>
-    <description>MySQL Database</description>
-    <res-ref-name>jdbc/mydb</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
-</resource-ref>
-```
-
-
-### 2.2  docBase
+### 2.2 docBase
 '
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
@@ -117,20 +100,10 @@ export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF
 '
 ( {CATALINA_HOME}/bin/setenv.sh )
 
-### 2.4 주요 기술 스택
-- **백엔드**:
-  - 언어: Java
-  - 웹 프레임워크: Struts
-  - 비즈니스 로직: JavaBeans
-  - AJAX 통신: DWR (Direct Web Remoting)
-- **프론트엔드**:
-  - JSP (JavaServer Pages)
-  - JavaScript
-  - HTML/CSS
-- **데이터베이스**: MySQL 
-- **웹 서버/WAS**: Apache Tomcat
-- **빌드 도구**: Maven
-- **버전 관리**: git (2025년 이전은 svn)
+### 2.4 log4j설정
+'framework.logpath /www/html/junnodae/WEB-INF'
+
+( {docBase}/WEB-INF/config/log4j.properties )
 
 ## 3. 시스템 아키텍처
 
