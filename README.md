@@ -21,9 +21,9 @@
    3. [용어 정의](#13-용어-정의)
    4. [참조 문서](#14-참조-문서)
 2. [포팅 때 할일](#2-포팅-때-할일)
-   1. [jndi](#21-jndi)
-   2. [docBase](#22-docBase)
-   3. [framework.properties 위치 지정](#23-framework.properties-위치-지정)
+   1. [docBase](#21-docBase)
+   2. [framework.properties 위치 지정](#22-framework.properties-위치-지정)
+   3. [jndi](#23-jndi)
    4. [log4j설정](#24-log4j설정)
 3. [시스템 아키텍처](#3-시스템-아키텍처)
    1. [전체 시스템 구조](#31-전체-시스템-구조)
@@ -68,7 +68,43 @@
 
 ## 2. 포팅 때 할일
 
-### 2.1 jndi
+### 2.1 docBase
+웹 document root 
+- {CATALINA_HOME}/conf/server.xml 설정
+
+```
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+        <Context path="" docBase="/www/html/junnodae" />
+```
+
+
+### 2.2 framework.properties 위치 지정
+현재 소스에서 쓰는 설정파일 위치
+- {CATALINA_HOME}/bin/setenv.sh 설정
+
+```
+export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF"
+```
+운영 경로
+```
+/usr/share/tomcat/bin/setenv.sh
+```
+
+개발 경로 (wsl)
+```
+/opt/tomcat/bin/setenv.sh
+
+```
+개발(windows): smarttomcat > 구성편집 클릭 후  vm options 에 다음 항목 저장
+```
+-Dframework.home=E:\0-pjt-20250423-junnodae\src\main\webapp\WEB-INF
+```
+
+
+
+
+### 2.3 jndi
 - framework.properties 설정
 ```
 framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb
@@ -91,22 +127,7 @@ framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb
               maxWaitMillis="-1" />
 ```
 
-### 2.2 docBase
-- {CATALINA_HOME}/conf/server.xml 설정
 
-```
-      <Host name="localhost"  appBase="webapps"
-            unpackWARs="true" autoDeploy="true">
-        <Context path="" docBase="/www/html/junnodae" />
-```
-
-### 2.3 framework.properties 위치 지정
-- {CATALINA_HOME}/bin/setenv.sh 설정
-
-```
-#!/bin/sh
-export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF"
-```
 
 ### 2.4 log4j설정
 -  {docBase}/WEB-INF/config/log4j.properties 설정
