@@ -18,7 +18,7 @@ import com.edutrack.framework.logging.Log;
 import com.edutrack.framework.logging.LogFactory;
 
 /**
- *  Resin JNDI�� ���� ���ؼ��� �����ϴ� Ŭ����
+ *  Resin JNDI를 통해 컨넥션을 관리하는 클래스
  * @author $Author: cvs $<p><p>$Id: DbJndiDataSource.java,v 1.1.1.1 2007/10/11 05:33:56 cvs Exp $
  */
 public class DbJndiDataSource extends DBConnectionManager
@@ -26,7 +26,7 @@ public class DbJndiDataSource extends DBConnectionManager
 	Log log = LogFactory.getLog(DbJndiDataSource.class);
 	Hashtable ds = null;
 	/**
-	 *  ������
+	 *  생성자
 	 */
 	public DbJndiDataSource()
 	{
@@ -36,7 +36,8 @@ public class DbJndiDataSource extends DBConnectionManager
 			Configuration c = ConfigurationFactory.getInstance().getConfiguration();
 			ds = new Hashtable();
 
-			log.debug("DbJndiDataSource INIT");
+			log.debug("DbJndiDataSource.java ----------- DbJndiDataSource INIT");
+			System.out.println("DbJndiDataSource INIT");
 			String[] jndiName = c.getStringArray("framework.persist.dbpoolManager.JndiDataSource.jndiName");
 			String wasName = c.getString("framework.persist.dbpoolManager.wasName");
 
@@ -44,7 +45,11 @@ public class DbJndiDataSource extends DBConnectionManager
 			else log.debug("jndiName[0] : " + jndiName[0]);
 
 
-System.out.println("jndiName[0] : " + jndiName[0]);
+			log.debug("jndiName[0] : " + jndiName[0]);
+			log.debug("jndiName[0] : " + jndiName[0]);
+			log.debug("jndiName[0] : " + jndiName[0]);
+			log.debug("jndiName[0] : " + jndiName[0]);
+			System.out.println("DbJndiDataSource.java ----------- jndiName[0] : " + jndiName[0]);
 
 
 			Context ctx = null;
@@ -76,13 +81,13 @@ System.out.println("jndiName[0] : " + jndiName[0]);
 		}
 	}
 
-	/* ���ؼ��� ��´�.
+	/* 컨넥션을 얻는다.
 	 * @see framework.persist.DBConnectionManager#getConnection()
 	 */
 	public Connection getConnection() throws SQLException
 	{
 		Object obj = ds.get("DEFAULT_DS");
-		if(obj == null) throw new SQLException("DbJndiDataSource.java CANNOT FIND DEFAULT DATASOURCE!!!!");
+		if(obj == null) throw new SQLException("CANNOT FIND DEFAULT DATASOURCE!!!!");
 
 		DataSource ods = (DataSource)obj;
 		Connection conn = ods.getConnection();
@@ -106,7 +111,7 @@ System.out.println("jndiName[0] : " + jndiName[0]);
 	}
 
 	/*
-	 * ���ؼ��� ��ȯ���ش�.
+	 * 컨넥션을 반환해준다.
 	 */
 	public void freeConnection(Connection conn) throws SQLException
 	{

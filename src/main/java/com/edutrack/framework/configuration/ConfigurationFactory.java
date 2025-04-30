@@ -48,10 +48,12 @@ public class ConfigurationFactory implements Constants
 			// String homeDir = "/var/www/html/junnodae/WEB-INF";//
 			String homeDir = jvmEnv.getProperty(KEY_HOME);
 			//String homeDir = "E:\\0-pjt-20250423-junnodae\\src\\main\\webapp\\WEB-INF";
-			System.out.println("-----------homeDir:" + homeDir);
-			if (homeDir == null)
+			System.out.println("ConfigurationFactory.java ----------- homeDir:" + homeDir);
+			if (homeDir == null) {
+				System.out.println("ERROR ConfigurationFactory.java ----------- homeDir is null");
+				System.out.println("ERROR ConfigurationFactory.java ----------- {docBase}/WEB-INF/config/framework.properties is missing");
 				throw new ConfigLoadingException(MSG_HOME_NOT_FOUND);
-
+			}
 
 			String configFile = homeDir + fs + "config" + fs +DEFAULT_CONFIG_FILENAME;
 			load(configFile);

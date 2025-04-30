@@ -2,32 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DWR Example</title>
-    <script src="/dwr/engine.js"></script>
-    <script src="/dwr/interface/exampleService.js"></script>
-    <script>
-        function sayHello() {
-            const name = document.getElementById("nameInput").value;
-            exampleService.greet(name, {
-                callback: function(response) {
-                    document.getElementById("result").innerText = response;
-                },
-                errorHandler: function(error) {
-                    console.error("Error: ", error);
-                }
-            });
-        }
-    </script>
+    <title> 전노대 90</title>
 </head>
 <body>
-<h1>lms 0423 14:32</h1>
+<h1> 전노대 90</h1>
 
-<input type="text" id="nameInput" placeholder="enter your name plz" />
-<button onclick="sayHello()">Greet</button>
-<p id="result"></p>
-<a href="helloWorld.cmd"> struts test</a><br>
-<a href="jndi.jsp"> jndi  test(jsp)</a><br>
-<a href="dbTest.cmd"> jndi dbcp test(struts)</a><br>
+<a href="http://localhost:8080/Main.cmd?cmd=mainShow&pMode=Home"> 첫 화면으로 </a><br>
+<br>---- <br>
+<a href="https://junnodae.youtrack.cloud/issues/JUN">  issue tracker </a>
+<br>---- <br>
+<a href="dev.html">  dev </a>
 
 </body>
 </html>

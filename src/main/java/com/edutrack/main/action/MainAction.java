@@ -201,8 +201,7 @@ public class MainAction extends StrutsDispatchAction{
 	 */
 	public ActionForward mainShow(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest request, HttpServletResponse httpServletResponse, Map model) throws Exception{
 		log.debug("----------------- mainHome Start ----------------");
-		System.out.println("----------------- mainHome Start ----------------");
-		System.out.println("mainShow() 시작");
+		System.out.println("DbJndiDataSource.java ----------- mainShow() ----------------");
 
 		String 	systemCode	= 	UserBroker.getSystemCode(request);
 		String 	userType 	= 	UserBroker.getUserType(request);
