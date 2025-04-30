@@ -80,7 +80,7 @@
 
 
 ### 2.2 framework.properties 위치 지정
-현재 소스에서 쓰는 설정파일 위치
+현재 소스에서 쓰는 설정파일 위치 (파일은 여기에 둔다 {docBase}/WEB-INF/config/framework.properties )
 - {CATALINA_HOME}/bin/setenv.sh 설정
 
 ```
@@ -105,7 +105,7 @@ export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF
 
 
 ### 2.3 jndi
-- framework.properties 설정
+- {docBase}/WEB-INF/config/framework.properties 설정
 ```
 framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb
 ```
