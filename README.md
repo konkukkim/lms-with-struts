@@ -92,23 +92,29 @@ framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb
 ```
 
 ### 2.2 docBase
-'
+- {CATALINA_HOME}/conf/server.xml 설정
+
+```
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
         <Context path="" docBase="/www/html/junnodae" />
-'
-( {CATALINA_HOME}/conf/server.xml )
+```
 
 ### 2.3 framework.properties 위치 지정
-'#!/bin/sh
+- {CATALINA_HOME}/bin/setenv.sh 설정
+
+```
+#!/bin/sh
 export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF"
-'
-( {CATALINA_HOME}/bin/setenv.sh )
+```
 
 ### 2.4 log4j설정
-'framework.logpath /www/html/junnodae/WEB-INF'
+-  {docBase}/WEB-INF/config/log4j.properties 설정
 
-( {docBase}/WEB-INF/config/log4j.properties )
+```
+framework.logpath /www/html/junnodae/WEB-INF
+```
+
 
 ## 3. 시스템 아키텍처
 
