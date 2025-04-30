@@ -69,8 +69,14 @@
 ## 2. 포팅 때 할일
 
 ### 2.1 jndi
-`framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb`
-`
+- framework.properties 설정
+```
+framework.persist.dbpoolManager.JndiDataSource.jndiName=jdbc/mydb
+```
+
+- {CATALINA_HOME}/conf/context.xml 설정
+
+```
     <!-- MySQL 데이터베이스 설정 -->
     <Resource name="jdbc/mydb"
               auth="Container"
@@ -83,8 +89,7 @@
               maxTotal="50"
               maxIdle="20"
               maxWaitMillis="-1" />
-`
-( {CATALINA_HOME}/conf/context.xml )
+```
 
 ### 2.2 docBase
 '
