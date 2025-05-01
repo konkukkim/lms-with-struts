@@ -81,20 +81,20 @@
 
 ### 2.2 framework.properties 위치 지정
 현재 소스에서 쓰는 설정파일 위치 (파일은 여기에 둔다 {docBase}/WEB-INF/config/framework.properties )
-- {CATALINA_HOME}/bin/setenv.sh 설정
 
-```
-export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF"
-```
 운영 경로
-```
-/usr/share/tomcat/bin/setenv.sh
-```
+- /usr/lib/systemd/system/tomcat.service 에 설정
+'''
+/usr/lib/systemd/system/tomcat.service
+'''
+
+
+
 
 개발 경로 (wsl)
+- {CATALINA_HOME}/bin/setenv.sh 설정
 ```
-/opt/tomcat/bin/setenv.sh
-
+export CATALINA_OPTS="$CATALINA_OPTS -Dframework.home=/www/html/junnodae/WEB-INF"
 ```
 개발(windows): smarttomcat > 구성편집 클릭 후  vm options 에 다음 항목 저장
 ```
