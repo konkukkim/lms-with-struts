@@ -33,6 +33,18 @@ public class CurriDateAction extends StrutsDispatchAction{
 	private Configuration config = ConfigurationFactory.getInstance().getConfiguration();
 
 
+	public static String getDateFlag(String systemCode, String colName1, String colName2, String inputDate) {
+		String dateFlag = "";
+		CurriDateDAO curriDateDao = new CurriDateDAO();
+		try {
+			dateFlag = curriDateDao.getDateFlag(systemCode, colName1, colName2, inputDate);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dateFlag;
+	}
+
+
 	/**
 	 * 학기일자설정 리스트를 가져온다.
 	 *

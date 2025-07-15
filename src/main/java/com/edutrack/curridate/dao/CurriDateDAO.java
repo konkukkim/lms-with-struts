@@ -342,6 +342,41 @@ public class CurriDateDAO extends AbstractDAO {
 		return retVal;
 	}
 
-
+	public String getDateFlag(String systemCode, String colName1, String colName2, String inputDate) throws DAOException {
+		String retVal = "";
+		StringBuffer sb = new StringBuffer();
+		QueryStatement sql = new QueryStatement();
+		sb.append(" SELECT CASE WHEN ");
+		if (!colName1.equals(""))
+			sb.append(String.valueOf(colName1) + " <= '" + inputDate + "' ");
+		if (!colName2.equals(""))
+			sb.append(" AND " + colName2 + " >= '" + inputDate + "' ");
+		sb.append(" THEN 'Y' ELSE 'N' END AS date_yn ");
+		sb.append(" FROM work_term ");
+		sb.append(" WHERE system_code = ? AND service_yn = 'Y' ");
+		sql.setString(systemCode);
+		sb.append(" ORDER BY " + colName1 + " desc ");
+		sb.append(" limit 1 ");
+		sql.setSql(sb.toString());
+		this.log.debug(" [getDateFlag] : " + sql.toString());
+		RowSet rs = null;
+		try {
+			rs = this.broker.executeQuery(/*(ISqlStatement)*/sql);
+			if (rs.next())
+				retVal = rs.getString("date_yn");
+		} catch (Exception e) {
+			e.printStackTrace();
+			this.log.error(e.getMessage());
+			throw new DAOException(e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				throw new DAOException(e.getMessage());
+			}
+		}
+		return retVal;
+	}
 
 }
