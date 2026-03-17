@@ -1,9 +1,9 @@
 <%--
-         ë©”ë‰´ ì£¼ì†Œ ê±¸ ì‹œ ì£¼ì˜ ì‚¬í•­ : ëª¨ë“  ë©”ë‰´ì—ì„œì˜ ë§í¬ì— ì„œë¸Œë©”ë‰´ê°€ ì—†ìœ¼ë©´ &MENUNO=0ë¥¼ ë¶™ì—¬ ì£¼ì‹­ì‹œìš”
-         ê·¸ë¦¬ê³    ì„œë¸Œë©”ë‰´ê°€ ìˆì„ ì‹œ ìƒìœ„ ë©”ë‰´ê°€ menu2ë¼ë©´ &MENUNO=2ë¼ê³  ë©”ë‰´ ë²ˆí˜¸ë¥¼ ë„£ì–´ì£¼ì‹œë©´ ê°ì‚¬í•˜ê² ìŠµë‹ˆë‹¤.
-         ìƒìœ„ ë©”ë‰´ëŠ” ë‹¹ì—°íˆ &MENUNO=0ì´ê² ì§€ìš”..
+         ¸Ş´º ÁÖ¼Ò °É ½Ã ÁÖÀÇ »çÇ× : ¸ğµç ¸Ş´º¿¡¼­ÀÇ ¸µÅ©¿¡ ¼­ºê¸Ş´º°¡ ¾øÀ¸¸é &MENUNO=0¸¦ ºÙ¿© ÁÖ½Ê½Ã¿ä
+         ±×¸®°í   ¼­ºê¸Ş´º°¡ ÀÖÀ» ½Ã »óÀ§ ¸Ş´º°¡ menu2¶ó¸é &MENUNO=2¶ó°í ¸Ş´º ¹øÈ£¸¦ ³Ö¾îÁÖ½Ã¸é °¨»çÇÏ°Ú½À´Ï´Ù.
+         »óÀ§ ¸Ş´º´Â ´ç¿¬È÷ &MENUNO=0ÀÌ°ÚÁö¿ä..
          
-         MainMenu=Y  -> ë¡œê·¸ì¸ í•˜ê¸° ì „ì˜ ë©”ì¸ë©”ë‰´ë“¤ì˜ íƒ€ì´í‹€ê³¼ ë„¤ë¹„ê²Œì´ì…˜ì„ Header íŒŒì¼ì—ì„œ ì œì–´í•˜ê¸° ìœ„í•œ ë³€ìˆ˜ì„.
+         MainMenu=Y  -> ·Î±×ÀÎ ÇÏ±â ÀüÀÇ ¸ŞÀÎ¸Ş´ºµéÀÇ Å¸ÀÌÆ²°ú ³×ºñ°ÔÀÌ¼ÇÀ» Header ÆÄÀÏ¿¡¼­ Á¦¾îÇÏ±â À§ÇÑ º¯¼öÀÓ.
 --%>
 <%@ page language="java"%>
 <%@ page import = "com.edutrack.progauthor.dao.ProgMenuDAO"%>
@@ -20,7 +20,7 @@
     int tmpSubCnt = 0;
     int menuCnt = 0;
 
-	if (PMODE.equals("Home") || PMODE.equals("Info") || PMODE.equals("Enter") || PMODE.equals("News") || PMODE.equals("Help") || PMODE.equals("SiteMap")) {	// ë©”ì¸ì—ì„œ ë§í¬ì‹œ
+	if (PMODE.equals("Home") || PMODE.equals("Info") || PMODE.equals("Enter") || PMODE.equals("News") || PMODE.equals("Help") || PMODE.equals("SiteMap")) {	// ¸ŞÀÎ¿¡¼­ ¸µÅ©½Ã
 		
 		
 		menuList = MenuDao.progMenuList(SYSTEMCODE, "Home", USERTYPE, null, null, "Y" );
@@ -37,20 +37,20 @@
 											<td height="27"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/login/menu02.gif"></td>
 										</tr>
 <% 
-        // ë©”ë‰´ ì½”ë“œí™”....
+        // ¸Ş´º ÄÚµåÈ­....
         for(int i=0; i< menuList.size() ; i++){
             MenuInfo = (ProgMenuDTO)menuList.get(i);
             
             subMenuCnt = MenuInfo.getCntSubMenu() ;
             
-            // ì„œë¸Œë©”ë‰´ê°€ ì—†ì„ ê²½ìš°..
+            // ¼­ºê¸Ş´º°¡ ¾øÀ» °æ¿ì..
             if(subMenuCnt==0){
 %>							
 										<tr> 
 											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%><%=MenuInfo.getMenuUrl() %>&MENUNO=0&pMode=Home&MainMenu=Y" class="l_menu"><%=MenuInfo.getMenuName() %></a></td>
 										</tr>
 <% 	        }
-            // ì„œë¸Œ ë©”ë‰´ê°€ ì¡´ì¬í•  ì‹œ..
+            // ¼­ºê ¸Ş´º°¡ Á¸ÀçÇÒ ½Ã..
             else {
     
             tmpSubCnt = subMenuCnt ;
@@ -62,7 +62,7 @@
 										</tr>
 										<tr>
 											<td class="l_menu_s_pd">
-												<!-- ì„œë¸Œë©”ë‰´ ì‹œì‘ -->
+												<!-- ¼­ºê¸Ş´º ½ÃÀÛ -->
 												<SPAN ID="menu<%=menuCnt %>" style="display:none;">
 												<table width="100%">
 													<% for(int j=0; j< tmpSubCnt ; j++){
@@ -77,7 +77,7 @@
 													<%} %>
 												</table>
 												</SPAN> 
-												<!-- ì„œë¸Œë©”ë‰´ ë -->
+												<!-- ¼­ºê¸Ş´º ³¡ -->
 											</td>
 										</tr>
 
@@ -102,16 +102,16 @@
 																	<td height="2"></td>
 																</tr>
 																<tr>
-																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="<%=CONTEXTPATH%>/RecommendSite.cmd?cmd=recommendSiteList&pMode=<%=PMODE %>&MENUNO=0">ì¶”ì²œì‚¬ì´íŠ¸</a></td>
+																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="<%=CONTEXTPATH%>/RecommendSite.cmd?cmd=recommendSiteList&pMode=<%=PMODE %>&MENUNO=0">ÃßÃµ»çÀÌÆ®</a></td>
 																</tr>
 																<tr>
-																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="http://www.trainingclu.org/" target="_blank">ë§ˆìŒìˆ˜ë ¨ì›</a></td>
+																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="http://www.trainingclu.org/" target="_blank">¸¶À½¼ö·Ã¿ø</a></td>
 																</tr>
 																<tr>
-																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="http://eco.junnodae.org/" target="_blank">ë¬¸í™”êµìœ¡ì›</a></td>
+																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="http://eco.junnodae.org/" target="_blank">¹®È­±³À°¿ø</a></td>
 																</tr>
 																<tr>
-																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="http://dli.nodong.net/" target="_blank">ë¯¼ì£¼ë…¸ë™ì—°êµ¬ì†Œ</a></td>
+																	<td class="login_banner"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon02.gif"> <a href="http://dli.nodong.net/" target="_blank">¹ÎÁÖ³ëµ¿¿¬±¸¼Ò</a></td>
 																</tr>
 																<tr>
 																	<td height="2"></td>
@@ -120,14 +120,14 @@
 																<tr>
 																	<td height="2" class="selectbox01">
 																		<select name onChange='if(this.selectedIndex>=0) { this.blur(); window.open(options[selectedIndex].value); }'>
-																			<option value="http://www.pressian.com/">í”„ë ˆì‹œì•ˆ</option>
-																			<option value="http://www.nodong.com/">ë…¸ë™ì˜ ì†Œë¦¬</option>
-																			<option value="http://www.samchang.or.kr/">ì‚¶ì´ ë³´ì´ëŠ” ì°½</option>
-																			<option value="http://rtv.or.kr/">ì‹œë¯¼ì°¸ì—¬ë°©ì†¡</option>
-																			<option value="http://www.jinbo.net/">ì§„ë³´ë„¤íŠ¸ì›Œí¬</option>
-																			<option value="http://migrants.jinbo.net/">ì´ì£¼ë…¸ë™ìí›„ì›íšŒ</option>
-																			<option value="http://www.kdlp.org/">ë¯¼ì£¼ë…¸ë™ë‹¹</option>
-																			<option value="http://www.nodong.org/">ë¯¼ì£¼ë…¸ì´</option>
+																			<option value="http://www.pressian.com/">ÇÁ·¹½Ã¾È</option>
+																			<option value="http://www.nodong.com/">³ëµ¿ÀÇ ¼Ò¸®</option>
+																			<option value="http://www.samchang.or.kr/">»îÀÌ º¸ÀÌ´Â Ã¢</option>
+																			<option value="http://rtv.or.kr/">½Ã¹ÎÂü¿©¹æ¼Û</option>
+																			<option value="http://www.jinbo.net/">Áøº¸³×Æ®¿öÅ©</option>
+																			<option value="http://migrants.jinbo.net/">ÀÌÁÖ³ëµ¿ÀÚÈÄ¿øÈ¸</option>
+																			<option value="http://www.kdlp.org/">¹ÎÁÖ³ëµ¿´ç</option>
+																			<option value="http://www.nodong.org/">¹ÎÁÖ³ëÃÑ</option>
 																		</select>
 																	</td>
 																</tr>
@@ -169,33 +169,33 @@
 											<td height="27"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_tit04.gif" width="153" height="20"></td>
 										</tr>
 										<tr> 
-											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="#" onClick="return toggleMenu('menu1')" class="l_menu">ëŒ€í•™ìƒí™œì•ˆë‚´</a></td>
+											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="#" onClick="return toggleMenu('menu1')" class="l_menu">´ëÇĞ»ıÈ°¾È³»</a></td>
 										</tr>
 										<tr>
 											<td class="l_menu_s_pd">
-												<!-- ì„œë¸Œë©”ë‰´ ì‹œì‘ -->
+												<!-- ¼­ºê¸Ş´º ½ÃÀÛ -->
 												<SPAN ID="menu1" style="display:none;">
 												<table width="100%">
 													<tr>
 													    <td width="8%" height="22" align="left">-</td>
-														<td width="92%" align="left"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum=11&pInfoNum2=1&MENUNO=1"  class="l_menu_s">ì…í•™ì—ì„œ ì¡¸ì—…ê¹Œì§€</a> 
+														<td width="92%" align="left"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum=11&pInfoNum2=1&MENUNO=1"  class="l_menu_s">ÀÔÇĞ¿¡¼­ Á¹¾÷±îÁö</a> 
 														</td>
 													</tr>
 													<tr>
 														<td width="8%" height="22" align="left">-</td>
-														<td width="92%" align="left"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum2=2&MENUNO=1"  class="l_menu_s">ëŒ€í•™ìƒí™œ ë° <br>í•™ìŠµë°©ë²•</a> 
+														<td width="92%" align="left"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum2=2&MENUNO=1"  class="l_menu_s">´ëÇĞ»ıÈ° ¹× <br>ÇĞ½À¹æ¹ı</a> 
 														</td>
 													</tr>
 												</table>
 												</SPAN> 
-												<!-- ì„œë¸Œë©”ë‰´ ë -->
+												<!-- ¼­ºê¸Ş´º ³¡ -->
 											</td>
 										</tr>
 										<tr> 
-											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum2=3&pInfoNum3=1&MENUNO=0" class="l_menu">êµì¬ì•ˆë‚´</a></td>
+											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum2=3&pInfoNum3=1&MENUNO=0" class="l_menu">±³Àç¾È³»</a></td>
 										</tr>
 										<tr> 
-											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Schedule.cmd?cmd=haksaSchedule&pMode=StudentCenter&MENUNO=0" class="l_menu">í•™ì‚¬ì¼ì •</a></td>
+											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Schedule.cmd?cmd=haksaSchedule&pMode=StudentCenter&MENUNO=0" class="l_menu">ÇĞ»çÀÏÁ¤</a></td>
 										</tr>
 										<tr> 
 											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon04.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Faq.cmd?cmd=homeFaqList&pMode=StudentCenter&MENUNO=0" class="l_menu">FAQ</a></td>
@@ -206,11 +206,11 @@
 										<tr> 
 											<td height="27"><a href="<%=CONTEXTPATH%>/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=21&pMode=<%=PMODE%>&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_tit03.gif" width="153" height="20"></a></td>
 										</tr>
-										<!-- ë™ì•„ë¦¬ ë°°ë„ˆ -->
+										<!-- µ¿¾Æ¸® ¹è³Ê -->
 										<tr>
 											<td class="left_community"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=communityShow&pMode=Community&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/btn_community.gif" width="150" height="52"></a></td>
 										</tr>
-										<!-- // ë™ì•„ë¦¬ ë°°ë„ˆ -->
+										<!-- // µ¿¾Æ¸® ¹è³Ê -->
 									</table>
 <%
 	}
@@ -226,20 +226,20 @@
 										</tr>
 										
 <% 
-        // ë©”ë‰´ ì½”ë“œí™”....
+        // ¸Ş´º ÄÚµåÈ­....
         for(int i=0; i< menuList.size() ; i++){
             MenuInfo = (ProgMenuDTO)menuList.get(i);
             
             subMenuCnt = MenuInfo.getCntSubMenu() ;
             
-            // ì„œë¸Œë©”ë‰´ê°€ ì—†ì„ ê²½ìš°..
+            // ¼­ºê¸Ş´º°¡ ¾øÀ» °æ¿ì..
             if(subMenuCnt==0){
 %>							
 										<tr> 
 											<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%><%=MenuInfo.getMenuUrl() %>&MENUNO=0&pMode=<%=PMODE%>" class="l_menu"><%=MenuInfo.getMenuName() %></a></td>
 										</tr>
 <% 	        }
-            // ì„œë¸Œ ë©”ë‰´ê°€ ì¡´ì¬í•  ì‹œ..
+            // ¼­ºê ¸Ş´º°¡ Á¸ÀçÇÒ ½Ã..
             else {
     
             tmpSubCnt = subMenuCnt ;
@@ -251,7 +251,7 @@
 										</tr>
 										<tr>
 											<td class="l_menu_s_pd">
-												<!-- ì„œë¸Œë©”ë‰´ ì‹œì‘ -->
+												<!-- ¼­ºê¸Ş´º ½ÃÀÛ -->
 												<SPAN ID="menu<%=menuCnt %>" style="display:none;">
 												<table width="100%">
 													<% for(int j=0; j< tmpSubCnt ; j++){
@@ -266,7 +266,7 @@
 													<%} %>
 												</table>
 												</SPAN> 
-												<!-- ì„œë¸Œë©”ë‰´ ë -->
+												<!-- ¼­ºê¸Ş´º ³¡ -->
 											</td>
 										</tr>
 
@@ -280,11 +280,11 @@
 										<tr> 
 											<td height="27"><a href="<%=CONTEXTPATH%>/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=21&pMode=<%=PMODE%>&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_tit03.gif" width="153" height="20"></a></td>
 										</tr>
-										<!-- ë™ì•„ë¦¬ ë°°ë„ˆ -->
+										<!-- µ¿¾Æ¸® ¹è³Ê -->
 										<tr>
 											<td class="left_community"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=communityShow&pMode=Community&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/btn_community.gif" width="150" height="52"></a></td>
 										</tr>
-										<!-- // ë™ì•„ë¦¬ ë°°ë„ˆ -->
+										<!-- // µ¿¾Æ¸® ¹è³Ê -->
 									</table>
 
 
@@ -305,12 +305,12 @@
 	
 	
 	
-	// ë™ì•„ë¦¬
+	// µ¿¾Æ¸®
 	else if(PMODE.equals("Community")){
 %>		
 							<table width="153" align="center" cellpadding="0" cellspacing="0">
 								<tr>
-									<td class="com_left_form"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_community.gif" width="165" height="34" border="0" alt="ë™ì•„ë¦¬ ë©”ë‰´"></td>
+									<td class="com_left_form"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_community.gif" width="165" height="34" border="0" alt="µ¿¾Æ¸® ¸Ş´º"></td>
 								</tr>
 							</table>
 							<table width="153" align="center" cellpadding="0" cellspacing="0">
@@ -318,31 +318,31 @@
 									<td>
 										<table class="com_left_menu" align="right">
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=commInfoList&pMode=Community&MENUNO=0" class="com_l_menu">ë‚˜ì˜ ë™ì•„ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=commInfoList&pMode=Community&MENUNO=0" class="com_l_menu">³ªÀÇ µ¿¾Æ¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=commPridebbsPagingList&pBbsId=1&MENUNO=0" class="com_l_menu">ë™ì•„ë¦¬ ìë‘</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=commPridebbsPagingList&pBbsId=1&MENUNO=0" class="com_l_menu">µ¿¾Æ¸® ÀÚ¶û</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=newCommunity&MENUNO=0" class="com_l_menu">ì‹ ê·œ ë™ì•„ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=newCommunity&MENUNO=0" class="com_l_menu">½Å±Ô µ¿¾Æ¸®</a></td>
 											</tr>
 											<tr>
 												<td  class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=recCommunity&MENUNO=0" class="com_l_menu">ì¶”ì²œ ë™ì•„ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=recCommunity&MENUNO=0" class="com_l_menu">ÃßÃµ µ¿¾Æ¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=makeCommunity&MENUNO=0" class="com_l_menu">ë™ì•„ë¦¬ ë§Œë“¤ê¸°</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/Community.cmd?cmd=makeCommunity&MENUNO=0" class="com_l_menu">µ¿¾Æ¸® ¸¸µé±â</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
@@ -351,31 +351,31 @@
 		if (USERTYPE.equals("M")) {
 %>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommCategory.cmd?cmd=commCategoryList&pMode=Community&MENUNO=0" class="com_l_menu">ë™ì•„ë¦¬ ë¶„ë¥˜ê´€ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommCategory.cmd?cmd=commCategoryList&pMode=Community&MENUNO=0" class="com_l_menu">µ¿¾Æ¸® ºĞ·ù°ü¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoPagingList&pMode=Community&MENUNO=0" class="com_l_menu">ë™ì•„ë¦¬ ê´€ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoPagingList&pMode=Community&MENUNO=0" class="com_l_menu">µ¿¾Æ¸® °ü¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoNewList&pMode=Community&MENUNO=0" class="com_l_menu">NEW ë™ì•„ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoNewList&pMode=Community&MENUNO=0" class="com_l_menu">NEW µ¿¾Æ¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoClosingList&pMode=Community&pUseYn=C&MENUNO=0" class="com_l_menu">íì‡„ì‹ ì²­ ë™ì•„ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoClosingList&pMode=Community&pUseYn=C&MENUNO=0" class="com_l_menu">Æó¼â½ÅÃ» µ¿¾Æ¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoClosingList&pMode=Community&pUseYn=N&MENUNO=0" class="com_l_menu">íì‡„ëœ ë™ì•„ë¦¬</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="/CommManage.cmd?cmd=commInfoClosingList&pMode=Community&pUseYn=N&MENUNO=0" class="com_l_menu">Æó¼âµÈ µ¿¾Æ¸®</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
@@ -383,18 +383,18 @@
 <%
 		}
 %>
-											<!-- ë™ì•„ë¦¬ ë‚˜ê°€ê¸° ë²„íŠ¼ -->
+											<!-- µ¿¾Æ¸® ³ª°¡±â ¹öÆ° -->
 											<tr>
-												<td class="com_left_exit"><a href="<%=myEdaLink%>"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_community_exit.gif" alt="ê°•ì˜ì‹¤ ë‚˜ê°€ê¸°"></a></td>
+												<td class="com_left_exit"><a href="<%=myEdaLink%>"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_community_exit.gif" alt="°­ÀÇ½Ç ³ª°¡±â"></a></td>
 											</tr>
-											<!-- // ë™ì•„ë¦¬ ë‚˜ê°€ê¸° ë²„íŠ¼ -->
+											<!-- // µ¿¾Æ¸® ³ª°¡±â ¹öÆ° -->
 										</table>
 									</td>
 								</tr>
 							</table>
 <%		
     }
-    // ë‚˜ì˜ ë™ì•„ë¦¬(sub)
+    // ³ªÀÇ µ¿¾Æ¸®(sub)
 	else if (PMODE.equals("CommSub")) {
 		COMMINFO = UserBroker.getCommInfo(request);
 		String userLevel = COMMINFO.userLevel;
@@ -409,7 +409,7 @@
 	}
 
 	function Community_Close(commid){
-		if(confirm('ë™ì•„ë¦¬ê°€ íì‡„ë˜ë©´ ë™ì•„ë¦¬ì˜ ëª¨ë“  ì •ë³´ê°€ ì‚­ì œë©ë‹ˆë‹¤. \n\në™ì•„ë¦¬ íì‡„ ì‹ ì²­ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?')){
+		if(confirm('µ¿¾Æ¸®°¡ Æó¼âµÇ¸é µ¿¾Æ¸®ÀÇ ¸ğµç Á¤º¸°¡ »èÁ¦µË´Ï´Ù. \n\nµ¿¾Æ¸® Æó¼â ½ÅÃ»À» ÇÏ½Ã°Ú½À´Ï±î?')){
 			hiddenFrame.document.location = "Community.cmd?cmd=commCloseRegist&pCommId="+commid+"&MENUNO=2";
 		}
 	}
@@ -417,7 +417,7 @@
 </script>
 							<table width="153" align="center" cellpadding="0" cellspacing="0">
 								<tr>
-									<td class="com_left_form"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_community.gif" width="165" height="34" border="0" alt="ë™ì•„ë¦¬ ë©”ë‰´"></td>
+									<td class="com_left_form"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_community.gif" width="165" height="34" border="0" alt="µ¿¾Æ¸® ¸Ş´º"></td>
 								</tr>
 							</table>
 							<table width="153" align="center" cellpadding="0" cellspacing="0">
@@ -428,11 +428,11 @@
 												<td class="left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="#" onClick="return toggleMenu('menu1')" class="com_l_menu">
 <%	if (MENUNO.equals("1"))
 		out.print("<font color=\"#FD6C02\">");	%>
-													ê²Œì‹œíŒ</a></td>
+													°Ô½ÃÆÇ</a></td>
 											</tr>
 											<tr>
 												<td>
-													<!-- ê²Œì‹œíŒ ì„œë¸Œë©”ë‰´ ì‹œì‘ -->
+													<!-- °Ô½ÃÆÇ ¼­ºê¸Ş´º ½ÃÀÛ -->
 													<SPAN ID="menu1" style="display:none;">
 													<table class="com_l_menu_s">
 <%		String[] bbsInfo = null;
@@ -447,7 +447,7 @@
 
 													</table>
 													</SPAN> 
-													<!-- ê²Œì‹œíŒ ì„œë¸Œë©”ë‰´ ë -->
+													<!-- °Ô½ÃÆÇ ¼­ºê¸Ş´º ³¡ -->
 												</td>
 											</tr>
 											<tr>
@@ -457,13 +457,13 @@
 		if (userLevel.equals("M") || userLevel.equals("A")) {
 %>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commMembersPagingList&MENUNO=0" class="l_menu">íšŒì›ë³´ê¸°</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commMembersPagingList&MENUNO=0" class="l_menu">È¸¿øº¸±â</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
 											</tr>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commMemberEdit&MENUNO=0" class="l_menu">ê°œì¸ì •ë³´ìˆ˜ì •</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commMemberEdit&MENUNO=0" class="l_menu">°³ÀÎÁ¤º¸¼öÁ¤</a></td>
 											</tr>
 											<tr>
 												<td  class="com_left_menulien"></td>
@@ -474,7 +474,7 @@
 		if (userLevel.equals("M")) {
 %>
 											<tr> 
-												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="javascript:goInviteUser();" class="com_l_menu">ì´ˆëŒ€í•˜ê¸°</a></td>
+												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="javascript:goInviteUser();" class="com_l_menu">ÃÊ´ëÇÏ±â</a></td>
 											</tr>
 											<tr>
 												<td class="com_left_menulien"></td>
@@ -483,33 +483,33 @@
 												<td class="com_left_pd"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/left/left_blet.gif" width="11" height="7" align="absmiddle"><a href="#" onClick="return toggleMenu('menu2')" class="com_l_menu">
 <%			if (MENUNO.equals("2"))
 				out.print("<font color=\"#FD6C02\">");	%>
-													ë™ì•„ë¦¬ ê´€ë¦¬</a></td>
+													µ¿¾Æ¸® °ü¸®</a></td>
 											</tr>
 											<tr>
 												<td>
-													<!-- ê²Œì‹œíŒ ì„œë¸Œë©”ë‰´ ì‹œì‘ -->
+													<!-- °Ô½ÃÆÇ ¼­ºê¸Ş´º ½ÃÀÛ -->
 													<SPAN ID="menu2" style="display:none;">
 													<table class="com_l_menu_s">
-														<!-- ë™ì•„ë¦¬ê´€ë¦¬ ì„œë¸Œë©”ë‰´ ì‹œì‘ -->
+														<!-- µ¿¾Æ¸®°ü¸® ¼­ºê¸Ş´º ½ÃÀÛ -->
 														<tr> 
-															<td height="22" align="left"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commMembersManagePagingList&MENUNO=2" class="l_menu_s">- íšŒì›ê´€ë¦¬</a>
+															<td height="22" align="left"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commMembersManagePagingList&MENUNO=2" class="l_menu_s">- È¸¿ø°ü¸®</a>
 															</td>
 														</tr>
 														<tr> 
-															<td height="22" align="left"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commBbsManagePagingList&MENUNO=2" class="l_menu_s">- ê²Œì‹œíŒê´€ë¦¬</a>
+															<td height="22" align="left"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=commBbsManagePagingList&MENUNO=2" class="l_menu_s">- °Ô½ÃÆÇ°ü¸®</a>
 															</td>
 														</tr>
 														<tr> 
-															<td height="22" align="left"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=makeCommunity&pWhere=C&pGubun=Edit&pCommId=<%=COMMINFO.commId%>&MENUNO=2" class="l_menu_s">- ë™ì•„ë¦¬ ì •ë³´ê´€ë¦¬</a>
+															<td height="22" align="left"><a href="<%=CONTEXTPATH%>/Community.cmd?cmd=makeCommunity&pWhere=C&pGubun=Edit&pCommId=<%=COMMINFO.commId%>&MENUNO=2" class="l_menu_s">- µ¿¾Æ¸® Á¤º¸°ü¸®</a>
 															</td>
 														</tr>
 														<tr> 
-															<td height="22" align="left"><a href="javascript:Community_Close('<%=COMMINFO.commId%>');">- ë™ì•„ë¦¬ íì‡„ì‹ ì²­</a>
+															<td height="22" align="left"><a href="javascript:Community_Close('<%=COMMINFO.commId%>');">- µ¿¾Æ¸® Æó¼â½ÅÃ»</a>
 															</td>
 														</tr>
 													</table>
 													</SPAN> 
-													<!-- ê²Œì‹œíŒ ì„œë¸Œë©”ë‰´ ë -->
+													<!-- °Ô½ÃÆÇ ¼­ºê¸Ş´º ³¡ -->
 												</td>
 											</tr>
 											<tr>
@@ -518,16 +518,16 @@
 <%
 		}
 %>
-											<!-- ë™ì•„ë¦¬ ë‚˜ê°€ê¸° ë²„íŠ¼ -->
+											<!-- µ¿¾Æ¸® ³ª°¡±â ¹öÆ° -->
 											<tr>
-												<td class="com_left_exit"><a href="Community.cmd?cmd=commInfoList&pMode=Community&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_community_exit.gif" alt="ë™ì•„ë¦¬ ë‚˜ê°€ê¸°"></a></td>
+												<td class="com_left_exit"><a href="Community.cmd?cmd=commInfoList&pMode=Community&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_community_exit.gif" alt="µ¿¾Æ¸® ³ª°¡±â"></a></td>
 											</tr>
-											<!-- // ë™ì•„ë¦¬ ë‚˜ê°€ê¸° ë²„íŠ¼ -->
+											<!-- // µ¿¾Æ¸® ³ª°¡±â ¹öÆ° -->
 										</table>
 									</td>
 								</tr>
 							</table>
-							<!-- // left ë©”ë‰´ -->
+							<!-- // left ¸Ş´º -->
 <%
 	}
 

@@ -106,7 +106,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 	String USERTYPE   = UserBroker.getUserType(request);
 	String SCHOOLYEAR = UserBroker.getSchoolYear(request);
 
-	//ë¡œê·¸ì¸ í•˜ì§€ ì•Šì€ ë©”ì¸
+	//·Î±×ÀÎ ÇÏÁö ¾ÊÀº ¸ŞÀÎ
 	int 	UnReadCnt 	= 	0;
 	String 	popup_link 	=	"";
 	int 	popup_cnt 	= 	0;
@@ -118,7 +118,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 		popup_cnt	=	juoList.size();
 		for(int i=0; i < popup_cnt; i++){
 			popNotice = (PopupNoticeDTO)juoList.get(i);
-			// ê³µì§€ë¥¼ ë ˆì´ì–´ë¡œ ë„ìš°ê¸° ìœ„í•´ ì•„ë˜ ë§í¬ëŠ” ì œì™¸ ì‹œí‚´
+			// °øÁö¸¦ ·¹ÀÌ¾î·Î ¶ç¿ì±â À§ÇØ ¾Æ·¡ ¸µÅ©´Â Á¦¿Ü ½ÃÅ´
 			popup_link	+=	"Popup_Notice('"+CONTEXTPATH+"/PopupNotice.cmd?cmd=popupNoticeShow&pSEQ_NO="+popNotice.getSeqNo()+"','"+popNotice.getWinWidth()+"','"+popNotice.getWinHeight()+"','"+popNotice.getWinXposition()+"','"+popNotice.getWinYposition()+"');\n";
 		}
 	}
@@ -133,7 +133,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 		}
 	}
 
-	String	myEdaLink		=	"javascript:alert('ë¡œê·¸ì¸ì„ í•˜ì„¸ìš”.')";
+	String	myEdaLink		=	"javascript:alert('·Î±×ÀÎÀ» ÇÏ¼¼¿ä.')";
 	String	USERDEPTDAECODE	=	UserBroker.getDeptDaeCode(request);
 	String	USERDEPTSOCODE	=	UserBroker.getDeptSoCode(request);
 	boolean	CHKDEPTMANAGER	=	UserBroker.chkDeptManager(request);
@@ -157,7 +157,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 %>
 <html>
 <head>
-<title>::: ì „íƒœì¼ì„ ë”°ë¥´ëŠ” ì‚¬ì´ë²„ ë…¸ë™ëŒ€í•™ :::</title>
+<title>::: ÀüÅÂÀÏÀ» µû¸£´Â »çÀÌ¹ö ³ëµ¿´ëÇĞ :::</title>
 <link rel="stylesheet" type="text/css" href="<%=CONTEXTPATH%>/css/style.css">
 <link rel="stylesheet" type="text/css" href="<%=CONTEXTPATH%>/css/form.css">
 <link rel="stylesheet" type="text/css" href="<%=CONTEXTPATH%>/css/form_community.css">
@@ -176,7 +176,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 <script type="text/javascript" src="<%=CONTEXTPATH%>/dwr/util.js"></script>
 <script type="text/javascript" src="<%=CONTEXTPATH%>/js/ajaxCommon.js"></script>
 <script type="text/javascript" src="<%=CONTEXTPATH%>/js/util/imageView.js"></script>
-<!-- Main_home.jspìš© ìŠ¤í¬ë¦½íŠ¸ ì‹œì‘ -->
+<!-- Main_home.jsp¿ë ½ºÅ©¸³Æ® ½ÃÀÛ -->
 <script language=javascript>
 <!--
 	function SetCookie (name, value) {
@@ -199,13 +199,13 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 		var start, end 
 		var i = 0 
 
-		// cookie ë¬¸ìì—´ ì „ì²´ë¥¼ ê²€ìƒ‰ 
+		// cookie ¹®ÀÚ¿­ ÀüÃ¼¸¦ °Ë»ö 
 		while(i <= document.cookie.length)
 		{ 
 			start = i 
 			end = start + name.length
 
-			// nameê³¼ ë™ì¼í•œ ë¬¸ìê°€ ìˆë‹¤ë©´
+			// name°ú µ¿ÀÏÇÑ ¹®ÀÚ°¡ ÀÖ´Ù¸é
 			if(document.cookie.substring(start, end) == name)
 			{ 
 				Found = true
@@ -214,18 +214,18 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 			i++
 		} 
 
-		// name ë¬¸ìì—´ì„ cookieì—ì„œ ì°¾ì•˜ë‹¤ë©´ 
+		// name ¹®ÀÚ¿­À» cookie¿¡¼­ Ã£¾Ò´Ù¸é 
 		if(Found == true)
 		{ 
 			start = end + 1 
 			end = document.cookie.indexOf(";", start) 
-			// ë§ˆì§€ë§‰ ë¶€ë¶„ì´ë¼ëŠ” ê²ƒì„ ì˜ë¯¸
+			// ¸¶Áö¸· ºÎºĞÀÌ¶ó´Â °ÍÀ» ÀÇ¹Ì
 			if(end < start) 
 			end = document.cookie.length 
-			// nameì— í•´ë‹¹í•˜ëŠ” valueê°’ì„ ì¶”ì¶œí•˜ì—¬ ë¦¬í„´í•œë‹¤. 
+			// name¿¡ ÇØ´çÇÏ´Â value°ªÀ» ÃßÃâÇÏ¿© ¸®ÅÏÇÑ´Ù. 
 			return document.cookie.substring(start, end) 
 		} 
-		// ì°¾ì§€ ëª»í–ˆë‹¤ë©´ 
+		// Ã£Áö ¸øÇß´Ù¸é 
 		return "" 
 	} 
 	
@@ -243,12 +243,12 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 
 	function form_chk(){
 		if (document.Login.userId.value == "" ) {
-			alert("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+			alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
 			return false;
 		}
 
 		if (document.Login.userPw.value == "") {
-			alert("íŒ¨ìŠ¤ì›Œë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”." );
+			alert("ÆĞ½º¿öµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä." );
 			return false;
 		}
 	}
@@ -259,10 +259,10 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 
 //-->
 </script>
-<!-- Main_home.jspìš© ìŠ¤í¬ë¦½íŠ¸ ë -->
+<!-- Main_home.jsp¿ë ½ºÅ©¸³Æ® ³¡ -->
 <script language="javascript">
 
-	//í”Œë˜ì‰¬ë©”ë‰´ ë§í¬
+	//ÇÃ·¡½¬¸Ş´º ¸µÅ©
 	function goPotalPage (str1, str2) {
 		var urlStr	=	"";
 		var param	=	"&pInfoNum="+str2;
@@ -285,7 +285,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 				urlStr	=	"<%=CONTEXTPATH%>/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=19&pMode=News&MENUNO=0";
 			}
 		}
-		// ì´ìš©ì•ˆë‚´
+		// ÀÌ¿ë¾È³»
 		else if(str1 == '4') {
 			urlStr	=	"<%=CONTEXTPATH%>/Main.cmd?cmd=infoShow&pMode=Help";
 		}
@@ -324,7 +324,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 	
 	}
 
-   //ë¡œê·¸ì¸ í¼ ì•„ì´ë””/ë¹„ë°€ë²ˆí˜¸ í‘œì‹œ ë‚˜íƒ€ë‚´ê³  ì‚¬ë¼ì§€ê¸°
+   //·Î±×ÀÎ Æû ¾ÆÀÌµğ/ºñ¹Ğ¹øÈ£ Ç¥½Ã ³ªÅ¸³»°í »ç¶óÁö±â
    function loginform_clearbg(type) {
     if (type == "id") {
      document.Login.userId.style.backgroundImage = '';
@@ -386,7 +386,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 	   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 	}
 </SCRIPT>
-<!-- // left ë©”ë‰´ -->
+<!-- // left ¸Ş´º -->
 </head>
 <%
 	String	bodyTagStr	=	"";
@@ -396,7 +396,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 %>
 <body <%=bodyTagStr%> onLoad="openPopupNotice();">
 <%
-// ë‹¬ë ¥ Layer
+// ´Ş·Â Layer
 
 	if (DATEYN != null && (DATEYN.toUpperCase().equals("Y")) ) {
 %>
@@ -408,7 +408,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 
 %>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-image:url(<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/bg.gif); background-repeat:repeat-x;">
-	<!-- logo, TOPë©”ë‰´ -->
+	<!-- logo, TOP¸Ş´º -->
 	<tr valign="top">
 		<td width="880" height="50"> 
 			<table width="880" height="50" border="0" cellpadding="0" cellspacing="0">
@@ -422,20 +422,20 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
       		</table>
 		</td>
 	</tr>
-	<!-- leftì´ë¯¸ì§€, ë¡œê·¸ì¸ë°•ìŠ¤, ì»¨í…ì¸ , í€µë©”ë‰´ -->
+	<!-- leftÀÌ¹ÌÁö, ·Î±×ÀÎ¹Ú½º, ÄÁÅÙÃ÷, Äü¸Ş´º -->
 	<tr valign="top">
 		<td width="880">
 			<table width="880" cellpadding="0" cellspacing="0">
-				<!-- ì¢Œì¸¡ë¶€ë¶„ (ë¡œê³ , ë¡œê·¸ì¸, ì…í•™ì‹ ì²­, ë©”ë‰´, ë°°ë„ˆ) -->
+				<!-- ÁÂÃøºÎºĞ (·Î°í, ·Î±×ÀÎ, ÀÔÇĞ½ÅÃ», ¸Ş´º, ¹è³Ê) -->
 				<tr valign="top"> 
 					<td width="200">
-						<!-- ë¡œê³  -->
+						<!-- ·Î°í -->
 						<table width="153" align="center" cellpadding="0" cellspacing="0">
 							<tr><!--http://www.junnodae.org/main.asp-->
 								<td style="padding:0 0 28 0"><a href="http://www.junnodae.org" onfocus='blur()';><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/logo.gif" border="0"></a></td>
 							</tr>
 						</table>
-						<!-- ë¡œê·¸ì¸ -->
+						<!-- ·Î±×ÀÎ -->
 <form name="Login" method="post" action="<%=CONTEXTPATH%>/Main.cmd?cmd=setLogin" onsubmit="return form_chk();">
 <%
 	if (USERID.equals("") || USERID.equals("null")) {
@@ -454,7 +454,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 								<td width="5"></td>
 							</tr>
 							<tr> 
-								<td height="30" colspan="3" align="right" class="idsearch"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon01.gif"><a href="<%=CONTEXTPATH%>/User.cmd?cmd=searchIdPwShow&pMode=Home&MENUNO=0" onfocus='blur()';><u>ì•„ì´ë””/ë¹„ë°€ë²ˆí˜¸ì°¾ê¸°</u></a></td>
+								<td height="30" colspan="3" align="right" class="idsearch"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon01.gif"><a href="<%=CONTEXTPATH%>/User.cmd?cmd=searchIdPwShow&pMode=Home&MENUNO=0" onfocus='blur()';><u>¾ÆÀÌµğ/ºñ¹Ğ¹øÈ£Ã£±â</u></a></td>
 							</tr>
 						</table>
 						<table width="153" align="center" cellpadding="0" cellspacing="0">
@@ -465,10 +465,10 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 <%
 	} else {
 %>					
-						<!-- ë¡œê·¸ì¸ -->
+						<!-- ·Î±×ÀÎ -->
 						<table width="153" align="center" cellpadding="0" cellspacing="0">
 							<tr> 
-								<td height="30" align="left" class="idsearch"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon06.gif" width="16" height="15" align="absmiddle"><font class="lg_name"> <%= UserBroker.getUserName(request)%>ë‹˜</font> <a href="<%=CONTEXTPATH%>/Message.cmd?cmd=receiveMessagePagingList&MENUNO=0" onfocus='blur()';><u>ìª½ì§€(<%=UnReadCnt%>)í†µ</u></a></td>
+								<td height="30" align="left" class="idsearch"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon06.gif" width="16" height="15" align="absmiddle"><font class="lg_name"> <%= UserBroker.getUserName(request)%>´Ô</font> <a href="<%=CONTEXTPATH%>/Message.cmd?cmd=receiveMessagePagingList&MENUNO=0" onfocus='blur()';><u>ÂÊÁö(<%=UnReadCnt%>)Åë</u></a></td>
 							</tr>
 							<tr>
 								<td height="18" align="center"><a href="<%=CONTEXTPATH%>/Main.cmd?cmd=userLogOff"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_quit.gif"></a> <a href="<%=CONTEXTPATH%>/User.cmd?cmd=userWrite&pGUBUN=edit&MENUNO=0"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_infor.gif"></a></td>
@@ -493,19 +493,19 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 						<table width="153" align="center" cellpadding="0" cellspacing="0">
 							<tr> 
 								<td>
-									<!-- LEFT ë©”ë‰´ ì‹œì‘ -->
+									<!-- LEFT ¸Ş´º ½ÃÀÛ -->
 									<%@include file="left.jsp" %>
-									<!-- LEFT ë©”ë‰´ ë -->
+									<!-- LEFT ¸Ş´º ³¡ -->
 								</td>
 							</tr>
 						</table>
 					</td>
-					<!-- // ì¢Œì¸¡ë¶€ë¶„ (ë¡œê³ , ë¡œê·¸ì¸, ì…í•™ì‹ ì²­, ë©”ë‰´, ë°°ë„ˆ -->
-					<!-- ì»¨í…ì¸  -->
+					<!-- // ÁÂÃøºÎºĞ (·Î°í, ·Î±×ÀÎ, ÀÔÇĞ½ÅÃ», ¸Ş´º, ¹è³Ê -->
+					<!-- ÄÁÅÙÃ÷ -->
 					<td width="680">
-						<!-- ë„¤ë¹„ê²Œì´ì…˜, ë¹„ì¥¬ì–¼ì´ë¯¸ì§€ -->
+						<!-- ³×ºñ°ÔÀÌ¼Ç, ºñÁê¾óÀÌ¹ÌÁö -->
 
-<%		//-- ë¡œê·¸ì¸ í•˜ê¸° ì „ì˜ HEADER
+<%		//-- ·Î±×ÀÎ ÇÏ±â ÀüÀÇ HEADER
 	if (PMODE.equals("Home") || PMODE.equals("Info") || PMODE.equals("Enter") || PMODE.equals("News") || PMODE.equals("Help") || PMODE.equals("SiteMap") || (USERID.equals("") || USERID.equals("null"))) {	%>
 						<table width="680" height="180" cellpadding="0" cellspacing="0">
 							<tr valign="top">
@@ -519,39 +519,39 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 %>		
 <div class="navbar">
   <div class="dropdown">
-    <button class="dropbtn">ëŒ€í•™ì†Œê°œ 
+    <button class="dropbtn">´ëÇĞ¼Ò°³ 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=1">ì¸ì‚¬ë§</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=2">ì„¤ë¦½ì·¨ì§€ì—°í˜</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=3">êµìœ¡ê³¼ì •ë‚´ìš©</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=4">êµìˆ˜ì§„ì†Œê°œ</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=5">ëŒ€í•™ì˜ ì¡°ì§ê³¼ ê¸°êµ¬</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=6">ì°¾ì•„ì˜¤ëŠ” ê¸¸</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=1">ÀÎ»ç¸»</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=2">¼³¸³ÃëÁö¿¬Çõ</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=3">±³À°°úÁ¤³»¿ë</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=4">±³¼öÁø¼Ò°³</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=5">´ëÇĞÀÇ Á¶Á÷°ú ±â±¸</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Info&pInfoNum=6">Ã£¾Æ¿À´Â ±æ</a>
     </div>
   </div> 
   <div class="dropdown">
-    <button class="dropbtn">ì…í•™ì•ˆë‚´ 
+    <button class="dropbtn">ÀÔÇĞ¾È³» 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="http://www.junnodae.org/Main.cmd?cmd=enterShow&pMode=Enter&pInfoNum=1">ì…í•™ì•ˆë‚´</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=enterShow&pMode=Enter&pInfoNum=2">ìˆ˜ê°•ì•ˆë‚´</a>
-      <a href="http://www.junnodae.org/Main.cmd?cmd=enterShow&pMode=Enter&pInfoNum=3">í•™ì‚¬ì¼ì •</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=enterShow&pMode=Enter&pInfoNum=1">ÀÔÇĞ¾È³»</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=enterShow&pMode=Enter&pInfoNum=2">¼ö°­¾È³»</a>
+      <a href="http://www.junnodae.org/Main.cmd?cmd=enterShow&pMode=Enter&pInfoNum=3">ÇĞ»çÀÏÁ¤</a>
     </div>
   </div> 
   <div class="dropdown">
-    <button class="dropbtn">í•™êµì†Œì‹ 
+    <button class="dropbtn">ÇĞ±³¼Ò½Ä 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="http://www.junnodae.org/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=17&pMode=News&MENUNO=0&pInfoNum=1">í•™ì‚¬ê³µì§€</a>
-      <a href="http://www.junnodae.org/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=18&pMode=News&MENUNO=0&pInfoNum=2">ì¼ë°˜ê³µì§€</a>
-      <a href="http://www.junnodae.org/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=19&pMode=News&MENUNO=0&pInfoNum=3">ì†Œì‹</a>
+      <a href="http://www.junnodae.org/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=17&pMode=News&MENUNO=0&pInfoNum=1">ÇĞ»ç°øÁö</a>
+      <a href="http://www.junnodae.org/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=18&pMode=News&MENUNO=0&pInfoNum=2">ÀÏ¹İ°øÁö</a>
+      <a href="http://www.junnodae.org/BbsContents.cmd?cmd=bbsContentsPagingList&pBbsId=19&pMode=News&MENUNO=0&pInfoNum=3">¼Ò½Ä</a>
     </div>
   </div> 
-  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Help&pInfoNum=0">ì´ìš©ì•ˆë‚´</a>
+  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Help&pInfoNum=0">ÀÌ¿ë¾È³»</a>
 </div>
 <img src="http://www.junnodae.org/img/login_mv4_0_0_2.jpg">
 <%
@@ -564,7 +564,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 						</table>
 
 <%
-	}	//-- ë¡œê·¸ì¸ í•˜ê¸° ì „ì˜ HEADER ë
+	}	//-- ·Î±×ÀÎ ÇÏ±â ÀüÀÇ HEADER ³¡
 	else {
 %>
 
@@ -579,10 +579,10 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 		} else {
 %>
 <div class="navbar">
-  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum=0">í•™ìƒì§€ì›ì„¼í„°</a>
-  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=stuCurriList&MENUNO=0&pInfoNum=0">ë‚˜ì˜ í•™ìŠµì‹¤</a>
-  <a class="onemenu" href="http://www.junnodae.org/PublishCurriSub.cmd?cmd=publishCurriSubPageList&pPareCode1=99999&pPareCode2=00001&pGubun=1&MENUNO=0&pMode=Home&MainMenu=Y&pInfoNum=0">ì—´ë¦°ë§ˆë‹¹</a>
-  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=communityShow&pMode=Community&MENUNO=0&pInfoNum=0">ë™ì•„ë¦¬</a>
+  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=StudentCenterShow&pMode=StudentCenter&pInfoNum=0">ÇĞ»ıÁö¿ø¼¾ÅÍ</a>
+  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=stuCurriList&MENUNO=0&pInfoNum=0">³ªÀÇ ÇĞ½À½Ç</a>
+  <a class="onemenu" href="http://www.junnodae.org/PublishCurriSub.cmd?cmd=publishCurriSubPageList&pPareCode1=99999&pPareCode2=00001&pGubun=1&MENUNO=0&pMode=Home&MainMenu=Y&pInfoNum=0">¿­¸°¸¶´ç</a>
+  <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=communityShow&pMode=Community&MENUNO=0&pInfoNum=0">µ¿¾Æ¸®</a>
 </div>
 
 <%
@@ -594,7 +594,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
 
 <script type="text/javascript" src="<%=CONTEXTPATH%>/dwr/interface/CommonUtilWork.js"></script>
 <Script>
-<%-- /* ê¶Œí•œ ì²´í¬ë¥¼ ìœ„í•˜ì—¬ ì„¸íŒ…í•¨  */ --%>
+<%-- /* ±ÇÇÑ Ã¼Å©¸¦ À§ÇÏ¿© ¼¼ÆÃÇÔ  */ --%>
 CommonUtilWork.getAuthorCheckAjax(callbackMethodAuthor);
 
 var c_right = "false";
@@ -615,7 +615,7 @@ function callbackMethodAuthor(arr){
 
 <%	}	%>
 
-<%	//-- íƒ€ì´í‹€ & ë„¤ë¹„ê²Œì´ì…˜
+<%	//-- Å¸ÀÌÆ² & ³×ºñ°ÔÀÌ¼Ç
 	//if(PMODE.equals("Home") || PMODE.equals("MyPage") || PMODE.equals("News") || PMODE.equals("SiteMap")) {
 
 		String NAVIGATION = "";
@@ -628,7 +628,7 @@ function callbackMethodAuthor(arr){
 								<tr valign="top"> 
 									<!-- sub title -->
 									
-                					<td height="34" width="302" class="stit_title"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon07.gif" align="absmiddle"><font face='ë‹ì›€' size="3"><b> <%=NAVIGATION.substring(NAVIGATION.lastIndexOf(">")+2,NAVIGATION.length())%></b></font></td>
+                					<td height="34" width="302" class="stit_title"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/common/icon07.gif" align="absmiddle"><font face='µ¸¿ò' size="3"><b> <%=NAVIGATION.substring(NAVIGATION.lastIndexOf(">")+2,NAVIGATION.length())%></b></font></td>
 									<!-- // sub title -->
 									<!-- history -->
 									<td class="stit_history" valign="bottom" align="right" width="378"> 
