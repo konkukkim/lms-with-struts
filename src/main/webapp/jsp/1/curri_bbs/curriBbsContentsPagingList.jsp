@@ -16,16 +16,16 @@
 
 	String 	bbs = "";
 	if(pBbsType.equals("notice")){
-			bbs = "Í≥µÏßÄÏÇ¨Ìï≠";
+			bbs = "∞¯¡ˆªÁ«◊";
 			bbsTitleImg	= "ctit3_01.gif";
 	}else	if(pBbsType.equals("bbs")){
-			bbs = "Í≤åÏãúÌåê";
+			bbs = "∞‘Ω√∆«";
 			bbsTitleImg	= "ctit4_01.gif";
 	}else	if(pBbsType.equals("qna")){
 			bbs = "Q&A";
 			bbsTitleImg	= "ctit6_01.gif";
 	}else	if(pBbsType.equals("pds")){
-			bbs = "ÏûêÎ£åÏã§";
+			bbs = "¿⁄∑·Ω«";
 			bbsTitleImg	= "ctit5_01.gif";
 	}
 
@@ -52,14 +52,14 @@
 </script>
 							<tr valign="top">
 									<!-- classroom title -->
-									<td height="34" width="346" class="c_stit_title" valign="bottom"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/classroom/class_centitle.gif" align="absmiddle">&nbsp;<font face='ÎèãÏõÄ' size="3"><b><%=CommonUtil.getPageTitle(request,bbs)%> </b></font></td>
+									<td height="34" width="346" class="c_stit_title" valign="bottom"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/classroom/class_centitle.gif" align="absmiddle">&nbsp;<font face='µ∏øÚ' size="3"><b><%=CommonUtil.getPageTitle(request,bbs)%> </b></font></td>
 									<!-- // classroom title -->
 									<!-- history -->
 									<td class="c_stit_history" valign="bottom" align="right" width="327">
 <%
 	String NAVIGATION = "";
 	if (model != null) NAVIGATION = (String)model.get("site_navigation");
-	if (PMODE.equals("Search")) NAVIGATION = "Ìôà > ÌÜµÌï©Í≤ÄÏÉâ";
+	if (PMODE.equals("Search")) NAVIGATION = "»® > ≈Î«’∞Àªˆ";
 	if (NAVIGATION != "") {
 		out.println(NAVIGATION) ;
 	} // end if
@@ -68,8 +68,8 @@
 								</tr>
 								<tr valign="top">
 									<td colspan="2" class="content_top" valign="top">
-										<!-- ÎÇ¥Ïö© -->
-										<!-- Í≤åÏãúÌåê Î¶¨Ïä§Ìä∏ ÏãúÏûë -->
+										<!-- ≥ªøÎ -->
+										<!-- ∞‘Ω√∆« ∏ÆΩ∫∆Æ Ω√¿€ -->
 										<table width="670" align="center">
 <!-- form start -->
 <form name="f">
@@ -82,24 +82,24 @@
 												<td colspan="11"></td>
 											</tr>
 											<tr class="s_tab02">
-												<td width="54">Î≤àÌò∏</td>
+												<td width="54">π¯»£</td>
 												<td class="s_tablien"></td>
-												<td width="360">Ï†úÎ™©</td>
+												<td width="360">¡¶∏Ò</td>
 												<td class="s_tablien"></td>
-												<td width="94">Îì±Î°ùÏûê</td>
+												<td width="94">µÓ∑œ¿⁄</td>
 												<td class="s_tablien"></td>
-												<td width="94">Îì±Î°ùÏùº</td>
+												<td width="94">µÓ∑œ¿œ</td>
 												<td class="s_tablien"></td>
-												<td width="65">Ï°∞ÌöåÏàò</td>
+												<td width="65">¡∂»∏ºˆ</td>
 											</tr>
 											<tr class="s_tab03">
 												<td colspan="11"></td>
 											</tr>
 											<tr>
 												<td colspan="11">
-													<!-- Î¶¨Ïä§Ìä∏ -->
+													<!-- ∏ÆΩ∫∆Æ -->
 														<div id="bbsList" style="width:100%;display:none"></div>
-													<!-- Î¶¨Ïä§Ìä∏ -->
+													<!-- ∏ÆΩ∫∆Æ -->
 												</td>
 											</tr>
 											<tr class="s_tab05">
@@ -109,18 +109,18 @@
 											<tr>
 												<td class="s_list_btn" colspan="11" height="30" align="right">
 <%	if(pBbsType.equals("notice") && (USERTYPE.equals("M") || USERTYPE.equals("P") || USERTYPE.equals("J"))) { %>
-	<script language=javascript>Button3("Í∏ÄÏì∞Í∏∞", "goAdd()", "");</script>
+	<script language=javascript>Button3("±€æ≤±‚", "goAdd()", "");</script>
 <%	} else if(!pBbsType.equals("notice")) { %>
-	<script language=javascript>Button3("Í∏ÄÏì∞Í∏∞", "goAdd()", "");</script>
+	<script language=javascript>Button3("±€æ≤±‚", "goAdd()", "");</script>
 <%	} %>
 												</td>
 											</tr>
-											<!-- ÌéòÏù¥ÏßÄ Î¶¨Ïä§Ìä∏, Í≤ÄÏÉâÎ∂ÄÎ∂Ñ -->
+											<!-- ∆‰¿Ã¡ˆ ∏ÆΩ∫∆Æ, ∞Àªˆ∫Œ∫– -->
 											<tr>
 												<td colspan="11" align=center>
 													<table valign=top height="25">
 														<tr>
-															<td><!-- ÌéòÏù¥Ïßï -->
+															<td><!-- ∆‰¿Ã¬° -->
 																<div id="getPagging" style="width:100%;display:none"></div></td>
 														</tr>
 													</table>
@@ -128,9 +128,9 @@
 														<tr>
 															<td align=middle height=30>
 																<select name=pSearchKey>
-																	<option value=subject selected>Ï†úÎ™©</option>
-																	<option value=keyword>ÎÇ¥Ïö©</option>
-																	<option value=reg_name>ÏûëÏÑ±Ïûê</option>
+																	<option value=subject selected>¡¶∏Ò</option>
+																	<option value=keyword>≥ªøÎ</option>
+																	<option value=reg_name>¿€º∫¿⁄</option>
 																</select>
 																<input maxlength=30 size=22 name=pKeyWord value="">
 																<a href="javascript:goSearchList()"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_search.gif" width=48 height=20 align=absmiddle></a>
@@ -140,15 +140,15 @@
 												</td>
 											</tr>
 </form>
-											<!-- // ÌéòÏù¥ÏßÄ Î¶¨Ïä§Ìä∏, Í≤ÄÏÉâÎ∂ÄÎ∂Ñ -->
+											<!-- // ∆‰¿Ã¡ˆ ∏ÆΩ∫∆Æ, ∞Àªˆ∫Œ∫– -->
 										</table>
-										<!-- // Í≤åÏãúÌåê Î¶¨Ïä§Ìä∏  ÎÅù -->
-										<!-- // ÎÇ¥Ïö© -->
+										<!-- // ∞‘Ω√∆« ∏ÆΩ∫∆Æ  ≥° -->
+										<!-- // ≥ªøÎ -->
 									</td>
 								</tr>
 							</table>
 						</td>
-						<!-- // Î≥∏Î¨∏ -->
+						<!-- // ∫ªπÆ -->
 <script language="javascript">
 	list_init('<%=SYSTEMCODE%>','<%=CONTEXTPATH%>');
 </script>

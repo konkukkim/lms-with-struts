@@ -13,7 +13,7 @@
 <script type="text/javascript" src="<%=CONTEXTPATH%>/dwr/interface/PublishCurriSubWork.js"></script>
 <script type="text/javascript" src="<%=CONTEXTPATH%>/js/edutrack/publish_curri_sub/publishCurriSubList.js"></script>
 
-										<!-- Í≤åÏãúÌåê Î¶¨Ïä§Ìä∏ ÏãúÏûë -->
+										<!-- ∞‘Ω√∆« ∏ÆΩ∫∆Æ Ω√¿€ -->
 										<table width="670" align="center">
 <form name="f">
 <input type="hidden" name="curPage" value="">
@@ -24,20 +24,20 @@
 												<td colspan="9"></td>
 											</tr>
 											<tr class="s_tab02">
-												<td width="40">Î≤àÌò∏</td>
+												<td width="40">π¯»£</td>
 												<td class="s_tablien"></td>
-												<td width="197">Í≥ºÏ†ï</td>
+												<td width="197">∞˙¡§</td>
 												<td class="s_tablien"></td>
 <%	if(pGubun.equals("2") && USERTYPE.equals("M")) {		%>
-												<td width="270">Ï£ºÏ†ú</td>
+												<td width="270">¡÷¡¶</td>
 												<td class="s_tablien"></td>
-												<td width="80">ÍµêÏàò</td>
+												<td width="80">±≥ºˆ</td>
 												<td class="s_tablien"></td>
-												<td width="80">ÌÜ†Î°†Î∞©Í∞úÏÑ§</td>
+												<td width="80">≈‰∑–πÊ∞≥º≥</td>
 <%	} else {	%>
-												<td width="350">Ï£ºÏ†ú</td>
+												<td width="350">¡÷¡¶</td>
 												<td class="s_tablien"></td>
-												<td width="80">ÍµêÏàò</td>
+												<td width="80">±≥ºˆ</td>
 <%	}	%>
 												
 											</tr>
@@ -47,24 +47,24 @@
 											
 											<tr>
 												<td colspan="9">
-													<!-- Î¶¨Ïä§Ìä∏ -->
+													<!-- ∏ÆΩ∫∆Æ -->
 														<div id="publishCurriSubList" style="width:100%;display:none"></div>
-													<!-- Î¶¨Ïä§Ìä∏ -->
+													<!-- ∏ÆΩ∫∆Æ -->
 												</td>
 											</tr>
 											
 											<tr class="s_tab05">
 												<td colspan="9"></td>
 											</tr>
-											<!-- ÌéòÏù¥ÏßÄ Î¶¨Ïä§Ìä∏, Í≤ÄÏÉâÎ∂ÄÎ∂Ñ -->
+											<!-- ∆‰¿Ã¡ˆ ∏ÆΩ∫∆Æ, ∞Àªˆ∫Œ∫– -->
 											<tr>
 												<td colspan="9" align=center>
 													<table valign=top height="30">
 														<tr>
 															<td>
-																<!-- ÌéòÏù¥Ïßï -->
+																<!-- ∆‰¿Ã¬° -->
 																<div id="getPagging" style="width:100%;display:none"></div>
-																<!-- ÌéòÏù¥Ïßï -->
+																<!-- ∆‰¿Ã¬° -->
 															</td>
 														</tr>
 													</table>
@@ -72,8 +72,8 @@
 														<tr>
 															<td align=middle height=30>
 																<select name=pSearchKey>
-																	<option value="cs.curri_name" selected>Í≥ºÏ†ïÎ™Ö</option>
-																	<option value="ct.curri_code">Í≥ºÏ†ïÏΩîÎìú</option>
+																	<option value="cs.curri_name" selected>∞˙¡§∏Ì</option>
+																	<option value="ct.curri_code">∞˙¡§ƒ⁄µÂ</option>
 																</select>
 																<input maxlength=30 size=22 name=pKeyWord  value="">
 																<a href="javascript:autoReload()"><img src="<%=CONTEXTPATH%>/img/<%=SYSTEMCODE%>/button_img/btn_search.gif" width=48 height=20 align=absmiddle></a>
@@ -84,8 +84,8 @@
 											</tr>
 </form>
 										</table>
-										<!-- // Í≤åÏãúÌåê Î¶¨Ïä§Ìä∏  ÎÅù -->
-										<!-- // ÎÇ¥Ïö© -->
+										<!-- // ∞‘Ω√∆« ∏ÆΩ∫∆Æ  ≥° -->
+										<!-- // ≥ªøÎ -->
 									</td>
 								</tr>
 							</table>

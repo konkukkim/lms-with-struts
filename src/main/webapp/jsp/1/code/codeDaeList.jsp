@@ -5,8 +5,8 @@
 <script type="text/javascript" src="<%=CONTEXTPATH%>/dwr/interface/CodeDaeWork.js"></script>
 <script type="text/javascript" src="<%=CONTEXTPATH%>/js/edutrack/code/codeDae.js"></script>
 
-										<!-- ÎÇ¥Ïö© -->
-										<!-- Í≤åÏãúÌåê Î¶¨Ïä§Ìä∏ ÏãúÏûë -->
+										<!-- ≥ªøÎ -->
+										<!-- ∞‘Ω√∆« ∏ÆΩ∫∆Æ Ω√¿€ -->
 										<table width="670" align="center">
 <!-- form start -->
 <form name="f">
@@ -21,7 +21,7 @@
 															<td width="50%">
 															</td>
 															<td align=right width="50%" height=30>
-<% if(CommonUtil.getAuthorCheck(request,  "C"))/* Í∂åÌïúÏ≤¥ÌÅ¨ */  { %><script language=javascript>Button5("ÎåÄÏΩîÎìúÏ∂îÍ∞Ä", "codeDaeWrite('block')", "");</script>&nbsp;<%	}	%>
+<% if(CommonUtil.getAuthorCheck(request,  "C"))/* ±««—√º≈© */  { %><script language=javascript>Button5("¥Îƒ⁄µÂ√ﬂ∞°", "codeDaeWrite('block')", "");</script>&nbsp;<%	}	%>
 															</td>
 														</tr>
 													</table>
@@ -29,32 +29,32 @@
 											</tr>
 											<tr>
 												<td colspan="11">
-<!-- ÎåÄÏΩîÎìú ÏûÖÎ†•Ï∞Ω start -->
+<!-- ¥Îƒ⁄µÂ ¿‘∑¬√¢ start -->
 <div id="codeDaeWrite" style="width:100%;display:none">
 													<table width="100%" border="0" cellpadding="0" cellspacing="0">
 														<tr class="s_tab05">
 															<td colspan="4"></td>
 														</tr>
 														<tr>
-															<td class="s_tab_view01" width="120">ÎåÄÏΩîÎìú</td>
+															<td class="s_tab_view01" width="120">¥Îƒ⁄µÂ</td>
 															<td class="s_tab_view02" colspan="3">
-																<input type=text name="pCodeDae" onChange="checkCodeDae();" value="" maxlength="10" dispName="ÎåÄÏΩîÎìú" notNull >
+																<input type=text name="pCodeDae" onChange="checkCodeDae();" value="" maxlength="10" dispName="¥Îƒ⁄µÂ" notNull >
 															</td>
 														</tr>
 														<tr class="s_tab03">
 															<td colspan="4"></td>
 														</tr>
 														<tr>
-															<td class="s_tab_view01" width="120">ÎåÄÏΩîÎìúÎ™Ö</td>
+															<td class="s_tab_view01" width="120">¥Îƒ⁄µÂ∏Ì</td>
 															<td class="s_tab_view02" colspan="3">
-																<input type=text name="pDaeName" size="50" maxlength="40" dispName="ÎåÄÏΩîÎìú" notNull >
+																<input type=text name="pDaeName" size="50" maxlength="40" dispName="¥Îƒ⁄µÂ" notNull >
 															</td>
 														</tr>
 														<tr class="s_tab03">
 															<td colspan="4"></td>
 														</tr>
 														<tr>
-															<td class="s_tab_view01" width="120">ÎåÄÏΩîÎìúÏÑ§Î™Ö</td>
+															<td class="s_tab_view01" width="120">¥Îƒ⁄µÂº≥∏Ì</td>
 															<td class="s_tab_view02" colspan="3">
 																<textarea name="pComment" cols="80" rows="5"></textarea>
 															</td>
@@ -63,10 +63,10 @@
 															<td colspan="4"></td>
 														</tr>
 														<tr>
-															<td class="s_tab_view01" width="120">ÏÇ¨Ïö©Ïó¨Î∂Ä</td>
+															<td class="s_tab_view01" width="120">ªÁøÎø©∫Œ</td>
 															<td class="s_tab_view02" colspan="3">
-																<input type=radio name="pUseYn" value="Y" class="no" checked>ÏÇ¨Ïö©
-														        <input type=radio name="pUseYn" value="N" class="no" >ÏÇ¨Ïö©ÏïàÌï®
+																<input type=radio name="pUseYn" value="Y" class="no" checked>ªÁøÎ
+														        <input type=radio name="pUseYn" value="N" class="no" >ªÁøÎæ»«‘
 															</td>
 														</tr>
 														<tr class="s_tab05">
@@ -75,29 +75,29 @@
 														<tr>
 															<td class="s_list_btn" colspan="4" height="30" align="right">
 	<div id="regButton" style="display:block">
-		<% if(CommonUtil.getAuthorCheck(request,  "C"))/* Í∂åÌïúÏ≤¥ÌÅ¨ */  { %><script language=javascript>Button3("Îì±Î°ù", "manageCodeDae('Add')", "");</script><%	}	%>&nbsp;<script language=javascript>Button3("Ï∑®ÏÜå", "codeDaeWrite('none')", "");</script>
+		<% if(CommonUtil.getAuthorCheck(request,  "C"))/* ±««—√º≈© */  { %><script language=javascript>Button3("µÓ∑œ", "manageCodeDae('Add')", "");</script><%	}	%>&nbsp;<script language=javascript>Button3("√Îº“", "codeDaeWrite('none')", "");</script>
 	</div>
 	<div id="modButton" style="display:none">
-		<% if(CommonUtil.getAuthorCheck(request,  "U"))/* Í∂åÌïúÏ≤¥ÌÅ¨ */  { %><script language=javascript>Button3("ÏàòÏ†ï", "manageCodeDae('Edit')", "");</script><%	}	%><% if(CommonUtil.getAuthorCheck(request,  "D"))/* Í∂åÌïúÏ≤¥ÌÅ¨ */  { %>&nbsp;<script language=javascript>Button3("ÏÇ≠Ï†ú", "manageCodeDae('Delete')", "");</script><%	}	%>&nbsp;<script language=javascript>Button3("Ï∑®ÏÜå", "codeDaeWrite('none')", "");</script>
+		<% if(CommonUtil.getAuthorCheck(request,  "U"))/* ±««—√º≈© */  { %><script language=javascript>Button3("ºˆ¡§", "manageCodeDae('Edit')", "");</script><%	}	%><% if(CommonUtil.getAuthorCheck(request,  "D"))/* ±««—√º≈© */  { %>&nbsp;<script language=javascript>Button3("ªË¡¶", "manageCodeDae('Delete')", "");</script><%	}	%>&nbsp;<script language=javascript>Button3("√Îº“", "codeDaeWrite('none')", "");</script>
 	</div>
 															</td>
 														</tr>
 													</table>
 </div>
-<!-- ÎåÄÏΩîÎìú ÏûÖÎ†•Ï∞Ω end -->
-									<!-- Î¶¨Ïä§Ìä∏ ÏãúÏûë -->
+<!-- ¥Îƒ⁄µÂ ¿‘∑¬√¢ end -->
+									<!-- ∏ÆΩ∫∆Æ Ω√¿€ -->
 											<tr class="s_tab01">
 												<td colspan="11"></td>
 											</tr>
 											<tr class="s_tab02">
-												<td width="40">Î≤àÌò∏</td>
+												<td width="40">π¯»£</td>
 												<td class="s_tablien"></td>
 												<td width="110">
 													<table border="0" cellpadding="0" cellspacing="0">
 														<tr class="s_tab02">
-															<!-- <td align="center"><a href="javascript:sorting(1,'code_dae','asc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_1" class="sort" style="width:20;cursor:hand;display:block">‚ñ≤</div></a></td> -->
-															<td align="center">ÎåÄÏΩîÎìú</td>
-															<!-- <td align="center"><a href="javascript:sorting(2,'code_dae','desc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_2" class="sort" style="width:20;cursor:hand;display:block">‚ñΩ</div></a></td> -->
+															<!-- <td align="center"><a href="javascript:sorting(1,'code_dae','asc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_1" class="sort" style="width:20;cursor:hand;display:block">°„</div></a></td> -->
+															<td align="center">¥Îƒ⁄µÂ</td>
+															<!-- <td align="center"><a href="javascript:sorting(2,'code_dae','desc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_2" class="sort" style="width:20;cursor:hand;display:block">°‰</div></a></td> -->
 														</tr>
 													</table>
 												</td>
@@ -105,9 +105,9 @@
 												<td width="215">
 													<table border="0" cellpadding="0" cellspacing="0">
 														<tr class="s_tab02">
-															<!-- <td align="center"><a href="javascript:sorting(3,'dae_name','asc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_3" class="sort" style="width:20;cursor:hand;display:block">‚ñ≥</div></a></td> -->
-															<td align="center">ÏΩîÎìúÎ™Ö</td>
-															<!-- <td align="center"><a href="javascript:sorting(4,'dae_name','desc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_4" class="sort" style="width:20;cursor:hand;display:block">‚ñΩ</div></a></td> -->
+															<!-- <td align="center"><a href="javascript:sorting(3,'dae_name','asc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_3" class="sort" style="width:20;cursor:hand;display:block">°‚</div></a></td> -->
+															<td align="center">ƒ⁄µÂ∏Ì</td>
+															<!-- <td align="center"><a href="javascript:sorting(4,'dae_name','desc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_4" class="sort" style="width:20;cursor:hand;display:block">°‰</div></a></td> -->
 														</tr>
 													</table>
 												</td>
@@ -115,9 +115,9 @@
 												<td width="110">
 													<table border="0" cellpadding="0" cellspacing="0">
 														<tr class="s_tab02">
-															<!-- <td align="center"><a href="javascript:sorting(5,'use_name','asc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_5" class="sort" style="width:20;cursor:hand;display:block">‚ñ≥</div></a></td> -->
-															<td align="center">ÏÉÅÌÉú</td>
-															<!-- <td align="center"><a href="javascript:sorting(6,'use_name','desc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_6" class="sort" style="width:20;cursor:hand;display:block">‚ñΩ</div></a></td> -->
+															<!-- <td align="center"><a href="javascript:sorting(5,'use_name','asc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_5" class="sort" style="width:20;cursor:hand;display:block">°‚</div></a></td> -->
+															<td align="center">ªÛ≈¬</td>
+															<!-- <td align="center"><a href="javascript:sorting(6,'use_name','desc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_6" class="sort" style="width:20;cursor:hand;display:block">°‰</div></a></td> -->
 														</tr>
 													</table>
 												</td>
@@ -125,23 +125,23 @@
 												<td width="110">
 													<table border="0" cellpadding="0" cellspacing="0">
 														<tr class="s_tab02">
-															<!-- <td align="center"><a href="javascript:sorting(7,'reg_date','asc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_7" class="sort" style="width:20;cursor:hand;display:block">‚ñ≥</div></a></td> -->
-															<td align="center">Îì±Î°ùÏùº</td>
-															<!-- <td align="center"><a href="javascript:sorting(8,'reg_date','desc')" onMouseOver="window.status='Ï†ïÎ†¨';return true" onMouseOut="window.status='';return true"><div id="sort_8" class="sort" style="width:20;cursor:hand;display:block">‚ñΩ</div></a></td> -->
+															<!-- <td align="center"><a href="javascript:sorting(7,'reg_date','asc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_7" class="sort" style="width:20;cursor:hand;display:block">°‚</div></a></td> -->
+															<td align="center">µÓ∑œ¿œ</td>
+															<!-- <td align="center"><a href="javascript:sorting(8,'reg_date','desc')" onMouseOver="window.status='¡§∑ƒ';return true" onMouseOut="window.status='';return true"><div id="sort_8" class="sort" style="width:20;cursor:hand;display:block">°‰</div></a></td> -->
 														</tr>
 													</table>
 												</td>
 												<td class="s_tablien"></td>
-												<td width="80">ÏàòÏ†ï/ÏÇ≠Ï†ú</td>
+												<td width="80">ºˆ¡§/ªË¡¶</td>
 											</tr>
 											<tr class="s_tab03">
 												<td colspan="11"></td>
 											</tr>
 											<tr>
 												<td colspan="11">
-													<!-- Î¶¨Ïä§Ìä∏ -->
+													<!-- ∏ÆΩ∫∆Æ -->
 														<div id="codeDaeList" style="width:100%;display:no"></div>
-													<!-- Î¶¨Ïä§Ìä∏ -->
+													<!-- ∏ÆΩ∫∆Æ -->
 												</td>
 											</tr>
 											<tr class="s_tab05">
@@ -151,22 +151,22 @@
 												<td class="s_list_btn" colspan="11" height="10" align="">
 												</td>
 											</tr>
-											<!-- ÌéòÏù¥ÏßÄ Î¶¨Ïä§Ìä∏, Í≤ÄÏÉâÎ∂ÄÎ∂Ñ -->
+											<!-- ∆‰¿Ã¡ˆ ∏ÆΩ∫∆Æ, ∞Àªˆ∫Œ∫– -->
 											<tr>
 												<td colspan="11" align=center>
 													<table valign=top height="25">
 														<tr>
-															<td><!-- ÌéòÏù¥Ïßï -->
+															<td><!-- ∆‰¿Ã¬° -->
 																<div id="getPagging" style="width:100%;display:no"></div>
 															</td>
 														</tr>
 													</table>
 												</td>
 											</tr>
-											<!-- // ÌéòÏù¥ÏßÄ Î¶¨Ïä§Ìä∏, Í≤ÄÏÉâÎ∂ÄÎ∂Ñ -->
+											<!-- // ∆‰¿Ã¡ˆ ∏ÆΩ∫∆Æ, ∞Àªˆ∫Œ∫– -->
 										</table>
-										<!-- // Í≤åÏãúÌåê Î¶¨Ïä§Ìä∏  ÎÅù -->
-										<!-- // ÎÇ¥Ïö© -->
+										<!-- // ∞‘Ω√∆« ∏ÆΩ∫∆Æ  ≥° -->
+										<!-- // ≥ªøÎ -->
 									</td>
 								</tr>
 								</form>
