@@ -1,0 +1,453 @@
+/* login 부분(메인)  ============================================*/
+.lg_name {
+	color: #00AEC8;
+	font-weight:bold;
+}
+
+/* 온라인투표 */
+.lg_polltext01{
+	color: #067AE5;
+}
+
+.lg_poll01{
+	padding: 8px 17px 8px 18px;
+}
+
+.lg_poll02{
+	padding: 3px 25px 7px 27px;
+	font-size:11px;
+}
+
+.lg_pollbtn{
+	background: url(../img/1/login/poll_btnbg.gif);
+	padding: 6px 10px 5px 0;
+}
+
+
+/* login 팝업  ============================================*/
+.lgpop_text01{
+	color: #FF7200;
+}
+
+
+/* top  ============================================*/
+.top_form {
+	margin: 0;
+	border: 0;
+	background-color: #ffffff;
+}
+
+.login_on{
+	font-family: 돋움, dotum
+	font-size:8pt;
+	color: #067AE5;
+}
+
+.login_memo { font-size:8pt;  text-decoration: none; color: #3CA1FF; font-family: 돋움, dotum }
+a.login_memo:link { font-size:8pt;  text-decoration: none; color: #3CA1FF;}
+a.login_memo:visited { font-size:8pt;  text-decoration: none; color: #3CA1FF;}
+a.login_memo:active { font-size:8pt;  text-decoration: none; color: #3CA1FF;}
+a.login_memo:hover { font-size:8pt;  text-decoration: underline; color: #3CA1FF;}
+
+
+
+/* left_menu  ===================================================*/
+.left_form {
+	width: 165x;
+	padding: 18px 0 5px 0;
+}
+
+/* left 크기변경(최대 165px) */
+.left_menu {
+	width: 153px;
+}
+
+.left_pd {
+	height: 22px;
+	width: 153px;
+	padding: 4px 0 0 8px;
+}
+
+/* left쪽 나중에 사용하면 (블릿out,over)
+.left-out {
+	height: 25px;
+	width: 150x;
+	padding: 0 0 0 5px;
+	BACKGROUND-IMAGE: url(../img/1/myeda/leftmenu.gif)
+}
+.left-over {
+	height: 25px;
+	width: 150x;
+	padding: 0 0 0 5px;
+	BACKGROUND-IMAGE: url(../img/1/myeda/leftmenu_on.gif)
+}
+*/
+
+.left_community {
+	height: 52px;
+	width: 150px;
+	padding: 15px 0 50px 0;
+}
+
+.l_menu_s_pd 
+	{padding: 0 5px 0 33px; font-size:8pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum 
+}
+
+
+
+.l_menu { font-size:9pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum }
+a.l_menu:link { font-size:9pt;  text-decoration: none; color: #606060;}
+a.l_menu:visited { font-size:9pt;  text-decoration: none; color: #606060;}
+a.l_menu:active { font-size:9pt;  text-decoration: none; color: #606060;}
+a.l_menu:hover { font-size:9pt;  text-decoration: none; color: #B40020;}
+
+.l_menu_on { font-size:9pt;  text-decoration: none; color: #3CA1FF ; font-family: 돋움, dotum }
+a.l_menu_on:link { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+a.l_menu_on:visited { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+a.l_menu_on:active { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+a.l_menu_on:hover { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+
+.l_menu_s {font-size:8pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum }
+.l_menu_s a:link {font-size:8pt;  text-decoration: none; color: #606060}
+.l_menu_s a:visited {font-size:8pt;  text-decoration: none; color: #606060}
+.l_menu_s a:active {font-size:8pt;  text-decoration: none; color: #606060}
+.l_menu_s a:hover {font-size:8pt;  text-decoration: none; color: #3CA1FF;}
+
+
+
+
+/* content  ===================================================*/
+/*.content_form {
+	width: 670px;
+	padding: 50px 0 25px 0;
+}*/
+
+.flash_pd {
+	width: 670px;
+	padding: 0px 0px 25px 0px;
+}
+
+.stit_blet {
+	background: url(../img/1/title/stit_blet01.gif);
+}
+
+.stit_title {
+	background: url(../img/1/title/stit_bg.gif);
+	padding: 11px 0 7px 2px;
+}
+
+.stit_history { background: url(../img/1/title/stit_bg.gif); padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: font-family: 돋움, dotum }
+.stit_history a:link { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: none}
+.stit_history a:visited { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: none}
+.stit_history a:hover { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #f05526; padding-top: 0px; text-decoration: none}
+
+.stit_bg {
+	width: 985px;
+	padding: 29px 0 10px 27px;
+}
+/* 타일틀과 컨텐츠사이 간격 조정... top 설정(기본 25px) */
+.content_top {
+	padding: 17px 0 0 0;
+}
+
+
+
+
+/* board-syle  ===================================================*/
+.s_tabtit {
+	padding: 0 0 7px 0;
+	font:13px;
+	vertical-align:middle;
+}
+
+.s_tablien {
+	color :#000000;
+	background: url(../img/1/bbs/s_tablien.gif);
+	width:1px;
+	vertical-align:middle;
+}
+
+.s_tab01 {
+	color :#000000;
+	background:#CC3048;
+	height:2px;
+	vertical-align:middle;
+}
+
+.s_tab02 {
+	color :#606060;
+	font-weight:bold;
+	background:#FDF4F4;
+	text-align:center;
+	vertical-align:middle;
+	height:30px;
+}
+
+.s_tab03 {
+	background:#E1E1E1;
+	height:1px;
+}
+
+.s_tab04 {
+	color :#606060;
+	vertical-align:middle;
+	height:27px;
+	padding: 0 10px 0 12px;
+}
+
+.tab_over { background-color:#FEF7F7; }
+.tab_out { background-color:#FFFFFF; }
+
+.s_tab04_cen {
+	color :#606060;
+	vertical-align:middle;
+	height:27px;
+	text-align:center;
+}
+
+.s_tab05 {
+	background:#919191;
+	height:1px;
+}
+
+/* 버튼부분 */
+.s_list_btn {
+	padding: 10px 3px 20px 0;
+}
+
+/* 학기일자설정 부분 */
+.s_btn01 {
+	padding: 0 3px 7px 0;
+}
+
+/* 페이지 번호 1.2.3.4...... 부분 */
+.s_list {
+	padding: 10px 0 0 0;
+}
+
+/* 상세보기화면 탭부분 */
+.s_tab_view01 {
+	color :#606060;
+	font-weight:bold;
+	background:#F6F6F6;
+	text-align:center;
+	vertical-align:middle;
+	height:30px;
+}
+
+.s_tab_view01_01 {
+	color :#606060;
+	font-weight:bold;
+	background:#F6F6F6;
+	vertical-align:middle;
+	padding: 0 10px 0 20px;
+	height:30px;
+}
+
+.s_tab_view02 {
+	color :#606060;
+	vertical-align:middle;
+	height:30px;
+	padding: 0 10px 0 12px;
+}
+
+.s_tab_view03 {
+	color :#606060;
+	vertical-align:middle;
+	height:30px;
+	padding: 10px 10px 10px 12px;
+}
+/* 이전글, 다음글 상하 라인, 위탁과정 라인에도 쓰임....*/
+.s_tab_lien01 {
+	background:#448CC7;
+	height:1px;
+}
+
+.s_tab_lien02 {
+	background:#448CC7;
+	height:1px;
+}
+
+
+/* 학기일자설정 버튼부분, 게시판 상위 버튼부분 */
+.s_btn01 {
+	padding: 0 3px 3px 0;
+}
+
+/* 날짜선택 버튼부분 */
+.cal_btn {
+	background-image:url("../img/1/button_img/btn_date.gif");
+	background-repeat:no-repeat;
+	border:none;
+	background-color:#FFFFFF;
+	width:45;
+	height:17;
+	cursor:hand;
+}
+
+.s_text01 {
+	color :#0000FF;
+	vertical-align:middle;
+}
+
+.s_text02 {
+	color :#FF0000;
+	vertical-align:middle;
+}
+
+.s_text03 {
+	color :#FF6600;
+	vertical-align:middle;
+}
+
+/* 중간 title 부분.... */
+.s_text04 {
+	color :#FF0000;
+	vertical-align:middle;
+}
+
+/* 게시판 페이지 리스트..... */
+.s_text05 {
+	color :#FF0000;
+	vertical-align:middle;
+}
+
+.s_text06 {
+	color :#3399ff;
+	vertical-align:middle;
+}
+
+/* 투표 그래프..... */
+.ballot {
+	vertical-align:middle;
+	padding: 2px 2px 2px 2px;
+}
+
+
+
+/* 댓글........  ===================================================*/
+.reply_form {
+	background:#f5f5f5;
+}
+
+.reply_w_icon {
+	vertical-align:middle;
+	background:#f5f5f5;
+	padding: 10px 8px 0 15px;
+	height:40px;
+}
+
+.reply_w_text01 {
+	vertical-align:middle;
+	background:#f5f5f5;
+	padding: 0px 10px 0 15px;
+	height:50px;
+}
+
+.reply_r_textform {
+	vertical-align:middle;
+	padding: 0 0 0 0;
+	height:35px;
+}
+
+.reply_list {
+	vertical-align:middle;
+	padding: 5px 0 5px 0;
+}
+
+.reply_list_s {
+	color :#FF0000;
+	vertical-align:middle;
+}
+
+/*  FAQ ........  ===================================================*/
+.faq_tab01 {
+	background:#F6F6F6;
+	vertical-align:middle;
+	font-weight: bold;
+}
+
+.faq_tab02 {
+	vertical-align:middle;
+	line-height: 13pt;
+}
+
+.faq_ttop {
+	background: url("../img/1/bbs/faq_ttop.gif");
+	width:650;
+	height:16px;
+}
+
+.faq_tbottom {
+	background: url("../img/1/bbs/faq_tbottom.gif");
+	width:650;
+	height:16px;
+}
+
+.faq_tbg {
+	background: url("../img/1/bbs/faq_tbg.gif");
+	width:650;
+	line-height: 20pt;
+}
+
+
+/*  메뉴권한관리 ........  ===================================================*/
+.menuper_ttop {
+	background: url("../img/1/bbs/faq_ttop.gif");
+	width:650;
+	height:16px;
+}
+
+.menuper_tbottom {
+	background: url("../img/1/bbs/faq_tbottom.gif");
+	width:650;
+	height:16px;
+}
+
+.menuper_tbg {
+	background: url("../img/1/bbs/faq_tbg.gif");
+	width:650;
+	line-height: 20pt;
+}
+
+.menuper_text01 { font-size:9pt;  text-decoration: none; color: #1766AE ; font-family: 돋움, dotum }
+a.menuper_text01:link { font-size:9pt;  text-decoration: none; color: #1766AE; font-weight:bold;}
+a.menuper_text01:visited { font-size:9pt;  text-decoration: none; color: #1766AE; font-weight:bold;}
+a.menuper_text01:active { font-size:9pt;  text-decoration: none; color: #1766AE; font-weight:bold;}
+a.menuper_text01:hover { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+
+
+/* 진행중인과정 ........  ===================================================*/
+.s_lien01 {
+	line-height: 35px;
+}
+
+.s_text07 {
+	color :#406498;
+	font-weight:bold;
+	height: 27px;
+}
+.s_text07_1 {
+}
+
+.s_text08 {
+	color :#FD6C01;
+	font-weight:bold;
+	line-height: 27px;
+}
+
+.s_text09 {
+	color :#0B60BD;
+	font-weight:bold;
+	line-height: 27px;
+}
+
+.s_pd01 {
+	height:17px;
+}
+
+.graph_box {
+	border: 1px solid #E2D7D8;
+	width: 150px;
+	display: inline;
+}

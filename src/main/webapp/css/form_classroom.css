@@ -1,0 +1,306 @@
+/* top 부분  ===================================================*/
+
+.c_logout {
+	padding: 7px 0 0 0;
+}
+
+/* 강의명 타이틀부분 */
+.c_title1 {
+	font-weight:bold;
+	font-size:11pt;
+	color :#1F4196;
+	padding: 7px 3px 0 25px;
+}
+
+/* classroom 좌측메뉴  ===================================================*/
+.c_left_form {
+	width: 165x;
+	padding: 3px 0 5px 0;
+}
+
+/* left 크기변경(최대 165px) */
+.c_left_menu {
+	width: 153px;
+}
+
+.c_left_menulien {
+	background:#ECEBEB;
+	width: 100px;
+	height:1px;
+}
+
+.c_left_pd {
+	height: 22px;
+	width: 153px;
+	padding: 4px 0 0 15px;
+}
+
+.c_left_exit {
+	height: 36px;
+	width: 150px;
+	padding: 15px 0 50px 0;
+}
+
+
+.c_l_menu { font-size:9pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum }
+a.c_l_menu:link { font-size:9pt;  text-decoration: none; color: #606060;}
+a.c_l_menu:visited { font-size:9pt;  text-decoration: none; color: #606060;}
+a.c_l_menu:active { font-size:9pt;  text-decoration: none; color: #606060;}
+a.c_l_menu:hover { font-size:9pt;  text-decoration: none; color: #B40020;}
+
+.c_l_menu_on { font-size:9pt;  text-decoration: none; color: #3CA1FF ; font-family: 돋움, dotum }
+a.c_l_menu_on:link { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+a.c_l_menu_on:visited { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+a.c_l_menu_on:active { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+a.c_l_menu_on:hover { font-size:9pt;  text-decoration: none; color: #3CA1FF; font-weight:bold;}
+
+.c_l_menu_s { width: 90%; padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum }
+.c_l_menu_s a:link { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060}
+.c_l_menu_s a:visited { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060}
+.c_l_menu_s a:active { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060}
+.c_l_menu_s a:hover { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #3CA1FF;}
+
+/* 강의실 메인에서 selectbox  ===================================================*/
+.c_menu_selectbox {
+	width: 115px;
+	height:20px;
+	background: FFFFFF;
+	color: #000000;
+}
+
+/* 강의실 content  ===================================================*/
+.c_content_form {
+	width: 711px;
+	padding: 0 0 25px 0;
+}
+
+.c_stit_title {
+	background: url(../img/1/title/stit_bg.gif);
+	padding: 11px 0 7px 2px;
+}
+
+.c_stit_history { background: url(../img/1/title/stit_bg.gif); padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: font-family: 돋움, dotum }
+.c_stit_history a:link { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: none}
+.c_stit_history a:visited { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: none}
+.c_stit_history a:hover { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #f05526; padding-top: 0px; text-decoration: none}
+
+.c_stit_bg {
+	width: 985px;
+	padding: 29px 0 10px 27px;
+}
+
+.c_img {
+	background: url(../img/1/classroom/classroom_img.gif);
+	height:65px;
+}
+
+
+/* 타일틀과 컨텐츠사이 간격 조정... top 설정(기본 25px) */
+.c_content_top {
+	padding: 25px 0 0 0;
+}
+
+/* 게시판 위부분 */
+.c_bbs_top {
+	color :#0A357E;
+	font-weight:bold;
+	padding: 0 3px 6px 0;
+}
+
+
+/* 학습자, 교수자 메인 공지사항부분 */
+.c_mbbs_lien {
+	padding: 5px 0 2px 5px;
+	height: 27px;
+}
+
+.c_mbbs_lien1 {
+	padding: 5px 0 2px 5px;
+	height: 27px;
+}
+
+/* 학습자메인에 학습현황 */
+.c_stu01 {
+	padding: 0 0 30px 10px;
+}
+
+.c_stu02 {
+	color :#FF8A01;
+	vertical-align:middle;
+	font-weight:bold;
+}
+
+/* 강의계획서  교수자정보 */
+.c_prof01 {
+	padding: 3px 0 3px 0;
+	height: 25px;
+}
+
+.c_proflien {
+	padding: 3px 4px 3px 2px;
+	height: 25px;
+}
+
+.c_prof02 {
+	padding: 3px 0 5px 0;
+}
+
+
+/* 시험보기 팝업  ===================================================*/
+.c_test_bodybg {
+	background-color:#F5F5F5;
+}
+
+.c_test_titbg {
+	background: url(../img/1/classroom/class_testbg.gif);
+}
+
+.c_test_tit {
+	color :#FFFFFF;
+	font-size:11pt;
+	font-weight:bold;
+}
+
+/* 문제폼, 답안작성폼 BG */
+.c_test01bg {
+	background-color:#AFAFAF;
+}
+
+/* 문제번호 텍스트 */
+.c_test_text01 {
+	color :#1F4196;
+	vertical-align:middle;
+}
+
+/* 문제 텍스트 */
+.c_test_tab01 {
+	color :#606060;
+	font-weight:bold;
+	background:#EBF0F7;
+	vertical-align:middle;
+	padding: 5px 10px 5px 15px;
+	line-height: 18px;
+}
+
+/* 보기 텍스트 */
+.c_test_tab02 {
+	vertical-align:middle;
+	padding: 7px 10px 5px 15px;
+	line-height: 18px;
+}
+
+.c_test_tablien01 {
+	background-image:url(../img/1/classroom/dot_lien01.gif);
+}
+
+/* 답안작성번호 텍스트 */
+.c_test_text02 {
+	color :#0B8480;
+	vertical-align:middle;
+	font-weight:bold;
+}
+
+/* 시간체크 */
+.c_test_time {
+	padding: 3px 2px 0 2px;
+	color :#333333;
+	font-weight:bold;
+}
+
+/* 답안제출하기, 답안 */
+.c_test_btn {
+	padding: 0px 20px 0 0px;
+}
+
+/* 단답형 답안글씨 */
+.c_test_text03 {
+	padding: 0px 0px 0px 5px;
+	font-weight:bold;
+}
+
+
+/* 평가관리  ===================================================*/
+
+/* 평가관리 박스안에 내용부분 */
+.c_tabbox {
+	color :#606060;
+	background:#F1F4F9;
+	padding: 10px 10px 10px 10px;
+	vertical-align:middle;
+	line-height: 18px;
+}
+
+.c_text01 {
+	color :#FF6600;
+	vertical-align:middle;
+}
+
+.c_text02 {
+	color :#277ED5;
+	vertical-align:middle;
+}
+
+
+/* 팝업  ===================================================*/
+.pop_form {
+	padding: 20px 0px 0px 0px;
+}
+
+.pop_topleft {
+	background-image:url(../img/1/pop/top_left.gif);
+	width: 21px;
+	height: 52px;
+}
+
+.pop_topbg {
+	background-image:url(../img/1/pop/top_bg.gif);
+	height: 52px;
+}
+
+.pop_topright {
+	background-image:url(../img/1/pop/top_right.gif);
+	width: 21px;
+	height: 52px;
+}
+
+.pop_midleft {
+	background-image:url(../img/1/pop/mid_leftbg.gif);
+	width: 21px;
+}
+
+.pop_midright{
+	background-image:url(../img/1/pop/mid_rightbg.gif);
+	width: 21px;
+}
+
+.pop_bottomleft{
+	background-image:url(../img/1/pop/bottom_left.gif);
+	width: 21px;
+	height: 6px;
+}
+
+.pop_bottombg{
+	background-image:url(../img/1/pop/bottom_bg.gif);
+	height: 6px;
+}
+
+.pop_bottomright{
+	background-image:url(../img/1/pop/bottom_right.gif);
+	width: 21px;
+	height: 6px;
+}
+
+.pop_tit {
+	color :#FFFFFF;
+	font-size:11pt;
+	font-weight:bold;
+	padding: 0px 0px 0px 7px;
+}
+
+.pop_btn {
+	padding: 15px 5px 5px 5px;
+}
+
+.pop_btnclose {
+	padding: 5px 20px 5px 5px;
+}

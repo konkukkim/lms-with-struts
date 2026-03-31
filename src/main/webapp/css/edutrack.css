@@ -1,0 +1,151 @@
+
+
+
+/*±âº» ¹è°æÈ­¸é*/
+/* BODY { font-family: "µ¸¿ò"; background-color:#FFFFFF; font-size:9pt; color:#656565;} */
+IMG {border: none;}
+font.a1 { font-family: "±¼¸²Ã¼"; font-size: 9pt; font-style: normal; line-height: 18px; font-weight: normal; font-variant: normal; text-transform: none; color: #272627}
+font.a2 { font-family: "±¼¸²Ã¼"; font-size: 9pt; font-style: normal; line-height: 20px; font-weight: normal; font-variant: normal; text-transform: none; color: #007196}
+font.a3 { font-family: "±¼¸²Ã¼"; font-size: 9pt; font-style: normal; line-height: 20px; font-weight: normal; font-variant: normal; text-transform: none; color: #5E5C5C}
+font.a4 { font-family: "±¼¸²Ã¼"; font-size: 9pt; font-style: normal; line-height: 20px; font-weight: bold;   font-variant: normal; text-transform: none; color: #ffffff}
+
+/*±âº» Å×ÀÌºí*/
+TD.base { font-family: "±¼¸²Ã¼"; font-size:9pt; font-weight:normal; color:#000000; background-color:#FFFFFF;}
+/*Å×ÀÌºí ¼±*/
+TD.bgline { font-family: "±¼¸²Ã¼"; background-color:#C4DBF7;}
+/*Å×ÀÌºí Head 1*/
+TD.hd1 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#FFFFFF; font-weight:bold; text-align:center;}
+/*Å×ÀÌºí Head 2*/
+TD.hd2 { font-family: "±¼¸²Ã¼"; font-size:10pt; color:#333399; background-color:#C4DBF7; text-align:center;}
+/*Å×ÀÌºí Head 3*/
+TD.hd3 { font-family: "±¼¸²Ã¼"; font-size:10pt; color:#ffffff; font-weight:bold; text-align:center}
+/*Å×ÀÌºí Head Enroll*/
+TD.hd5 {font-family: "±¼¸²Ã¼"; font-size:10pt; color:#FFFFFF; background-color:#CCC0F5; font-weight:bold; text-align:center;}
+/*Å×ÀÌºí List 1*/
+TD.lt1 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#000000; background-color:#FFFFFF;}
+/*Å×ÀÌºí List 2*/
+TD.lt2 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#000000; background-color:#fafafa;}
+/*Å×ÀÌºí List 3*/
+TD.lt3 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#52552; text-align:center;}
+/*Å×ÀÌºí List 7*/
+TD.lt7 {font-family: "±¼¸²Ã¼"; font-size:9pt;}
+/*Å×ÀÌºí È¿°ú ¾øÀ½*/
+TD.no { font-family: "±¼¸²Ã¼"; font-size:9pt; background-color:none;}
+/*Å×ÀÌºí TD*/
+TD { font-family: "±¼¸²Ã¼"; font-size:9pt; font-weight:normal; }
+/*¸µÅ© ±âº»*/
+TD.td1 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#282828; line-height:1.3;}
+/*Å×ÀÌºí TD1*/
+TD.td2 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#008EC6; line-height:1.3;}
+/*Å×ÀÌºí TD2*/
+
+A:link { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#000000;}
+A:visited { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#1a1a1a;}
+A:hover { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#1a75ff;}
+A:active { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#la75ff;}
+
+/*Æû ±âº»*/
+INPUT,SELECT,TEXTAREA { font-family: "±¼¸²Ã¼"; font-size:9pt; border:1 solid #808080; color:#000000; }
+/*Æû ¹öÆ° 1*/
+INPUT.bt1 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#000000; background-color:#DDDDDD;}
+/*Æû ¹öÆ° 2*/
+INPUT.bt2 { font-family: "±¼¸²Ã¼"; font-size:9pt; color:#000000; background-color:#DDDDDD;}
+/*Æû ÀÌ¹ÌÁö ¹öÆ°*/
+INPUT.img { font-family: "±¼¸²Ã¼"; border:0;}
+/*Æû ½ºÅ¸ÀÏ ¾øÀ½*/
+INPUT.no { font-family: "±¼¸²Ã¼"; border:0;}
+
+
+/* ¿ÞÂÊ ¸Þ´º ¸µÅ©½Ã*/
+A.left01:link {
+	FONT-SIZE: 12px; COLOR: #545454; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+A.left01:visited {
+	FONT-SIZE: 12px; COLOR: #545454; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+A.left01:active {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+A.left01:hover {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+
+/*ÃÑ°ü¸®ÀÚ ±âº»*/
+A.ms:link {
+	FONT-SIZE: 12px; COLOR: #696969; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+A.ms:visited {
+	FONT-SIZE: 12px; COLOR: #696969; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+A.ms:active {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+A.ms:hover {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: µ¸¿ò,±¼¸²Ã¼, verdana; TEXT-DECORATION: none
+}
+
+/* °­ÀÇ½Ç °Ô½ÃÆÇ */
+A.cboard:link { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#000000;}
+A.cboard:visited { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#999999;}
+A.cboard:hover { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#1a75ff;}
+A.cboard:active { font-family: "±¼¸²Ã¼"; text-decoration:none; color:#la75ff;}
+
+
+
+
+
+.grey05 { color:#838383;line-height:15pt; font-weight:none; }
+
+
+.com_orange01 { FONT-SIZE: 17px;color:#E98900;line-height:15pt; font-weight:bold; }
+.com_blue01 { FONT-SIZE: 17px;color:#0648A3;line-height:15pt; font-weight:bold; }
+
+.brown01 { color:#864A09;line-height:15pt; font-weight:bold; }
+.black01 { color:#000000;line-height:15pt; font-weight:none; }
+.blue05 { color:#1F3174;line-height:15pt; font-weight:none; }
+
+
+
+
+.blue06 { color:#2678A4;line-height:15pt; font-weight:bold; font-size:10pt; }
+
+
+
+
+.grey01 { color:#696969;line-height:18pt;font-size:9pt; font-weight:none; }
+a.grey01:link { color:#696969;text-decoration:none; font-weight:none; }
+a.grey01:visited { color:#696969;text-decoration:none; font-weight:none; } 
+a.grey01:active{ color:#696969;text-decoration:none; font-weight:none; }
+a.grey01:hover{ color:#696969;text-decoration:none; font-weight:none; }
+
+
+.grey02 { color:#333333;line-height:15pt; font-weight:bold; }
+.grey03 { color:#2F2F2F;line-height:15pt; font-weight:bold; }
+.grey04 { color:#2F2F2F;line-height:15pt; font-weight:none; }
+.grey05 { color:#434343;line-height:18pt; font-weight:none; }
+
+
+.blue01 { color:#66809C;line-height:13pt; font-weight:bold; }
+.blue02 { color:#6475A0;line-height:13pt; font-weight:bold; }
+
+.blue03 { color:#4B74BC;line-height:13pt; font-weight:bold; }
+a.blue03:link { color:#4B74BC;text-decoration:none; font-weight:bold; }
+a.blue03:visited { color:#4B74BC;text-decoration:none; font-weight:bold; } 
+a.blue03:active{ color:#4B74BC;text-decoration:none; font-weight:bold; }
+a.blue03:hover{ color:#4B74BC;text-decoration:none; font-weight:bold; }
+
+.blue04 { color:#076170;line-height:15pt; font-weight:none; }
+.blue05 { color:#0648A3;line-height:18pt; font-weight:none; }
+.blue07 { color:#0648A3;line-height:15pt; font-weight:none; }
+
+.brown01 { color:#7B2904;line-height:15pt; font-weight:none; }
+
+
+.black02 { color:000000;line-height:15pt; font-weight:none; }
+
+.OffLine {
+	font-family: "±¼¸²Ã¼";
+	font-size: 12px;
+	line-height: 12px;
+	color: #666666;
+}

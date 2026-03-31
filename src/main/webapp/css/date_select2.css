@@ -1,0 +1,57 @@
+.calendar {
+    position:absolute; 
+    width:160px;
+    top:50; 
+    left:50; 
+    visibility:hidden;
+    border: 1 outset buttonhighlight;
+}
+
+.cal_title {
+    background-color:#1C538A;
+	font-size:9pt;
+	color:white;
+	font-weight:bold;
+	font-family:±¼¸²;
+}
+
+td.cal_ym {
+    font-size:10pt;
+    font-weight:bold;
+}
+
+table.cal_box {
+    font-size:10pt;
+    font-family:±¼¸²;
+    border:none;
+    border-bottom:1px #737373 solid;
+    border-left:1px #737373 solid;
+}
+
+td.cal_box {
+    border:none;
+    border-top:1px #737373 solid;
+    border-right:1px #737373 solid;
+}
+
+table.cal_head {
+    background-color:#D0D0D0;
+    height:24;
+}
+
+td.cal_head {
+    border-top:1px #737373 solid;
+    border-right:1px #737373 solid;
+    background-color:#D0D0D0;
+    text-align:center;
+    height:20;
+}
+
+td.cal_list {
+    border:none;
+    border-top:1px #737373 solid;
+    border-right:1px #737373 solid;
+	background-color:#F0F0FF;
+    text-align:center;
+    height:20;
+}

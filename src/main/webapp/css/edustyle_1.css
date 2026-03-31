@@ -1,0 +1,116 @@
+td {  font-size: 9pt; text-decoration: none; color: #666666 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  line-height: 16px }
+
+	a:link {  color: #666666; text-decoration: none }
+	
+	a:active {  color: #666666; text-decoration: none }
+	
+	a:visited {  color: #666666; text-decoration: none }
+	
+	a:hover {  color: #5D9194; text-decoration: none }
+
+/* ·Î±ä ¸Þ½ÃÁö Á¤ÀÇ */
+.login01 {  font-size: 9pt; text-decoration: none; color: #4E453A;  font-family: "µ¸¿ò", "µ¸¿òÃ¼"}
+
+
+/* ÁÂÃø¸Þ´º Á¤ÀÇ */	
+
+.con01 {  font-size: 9pt; text-decoration: none; color: #939393 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼"; text-decoration:underline}
+
+	a:link {  color: #939393; text-decoration: none  text-decoration:underline}
+	
+	a:active {  color: #939393; text-decoration: none  text-decoration:underline}
+	
+	a:visited {  color: #939393; text-decoration: none  text-decoration:underline}
+	
+	a:hover {  color: #F97907; text-decoration: none  text-decoration:underline}
+
+
+/* ¿ìÃø¸Þ´º Á¤ÀÇ */	
+
+
+
+/* Å×ÀÌºí Á¤ÀÇ */	
+
+.td01 {  font-size: 9pt; text-decoration: none; color: #9D9D9C	 ; font-weight: bold; font-family: "µ¸¿ò", "µ¸¿òÃ¼"}
+.td02 {  font-size: 9pt; text-decoration: none; color: #14B3CD	 ; font-weight: bold; font-family: "µ¸¿ò", "µ¸¿òÃ¼"}
+.td03 {  font-size: 9pt; text-decoration: none; color: #99926A	 ; font-family: "µ¸¿ò", "µ¸¿òÃ¼"}
+
+/* Å×ÀÌºí Á¤ÀÇ */
+
+
+
+
+/* History list CSS */
+
+.history { font-size:11px; }
+a.history:link { font-size:11px;color:#313031; text-decoration:none }
+a.history:visited { font-size:11px;color:#313031; text-decoration:none }
+a.history:active { font-size:11px;color:#F87B01; text-decoration:none }
+a.history:hover { font-size:11px;color:#F87B01; text-decoration:none }
+
+a.history01:link { font-size:11px;color:#5F1203; text-decoration:underline }
+a.history01:visited { font-size:11px;color:#5F1203; text-decoration:underline }
+a.history01:active { font-size:11px;color:#03315F; text-decoration:underline }
+a.history01:hover { font-size:11px;color:#03315F; text-decoration:underline }
+
+/* History list CSS */
+
+
+/* °Ô½ÃÆÇ Á¤ÀÇ */
+
+.b_title01 {  font-size:9pt; text-decoration: none; color: #004048 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" }
+        
+.b_title02 {  font-size: 9pt; text-decoration: none; color: #7F7463 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  font-weight: bold }
+	
+.b_title03 {  font-size: 9pt; text-decoration: none; color: #E88A1C ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  font-weight: bold }
+
+.b_title04 {  font-size: 9pt; text-decoration: none; color: #E88A1C ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼"  }
+
+.b_title05 {  font-size: 9pt; text-decoration: none; color: #747474 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  font-weight: bold }
+
+.b_title06 {  font-size: 11pt; text-decoration: none; color: #E88A1C ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  font-weight: bold }
+
+.b_bg01 {  font-size: 9pt; text-decoration: none; color: #666666 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  line-height: 16px }
+a.b_bg01:link {  color: #666666; text-decoration: none }	
+a.b_bg01:active {  color: #666666; text-decoration: none }	
+a.b_bg01:visited {  color: #A9927A; text-decoration: none }	
+a.b_bg01:hover {  color: #FD8403; text-decoration: none }
+
+.b_bg02 {  font-size: 9pt; text-decoration: none; color: #ffffff ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  line-height: 16px }
+
+	a:link {  color: #ffffff; text-decoration: none }
+	
+	a:active {  color: #ffffff; text-decoration: none }
+	
+	a:visited {  color: #ffffff; text-decoration: none }
+	
+	a:hover {  color: #FC8608; text-decoration: none }
+.no {  font-size:8pt; text-decoration: none; color: #9A8C82 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" }
+.tbox {font-size:12px; font-family: µ¸¿ò ; border:1px solid #B5B3B5}
+.tbox2 {font-size:12px; font-family: µ¸¿ò ; border:1px solid #B39D9D}
+
+/* °Ô½ÃÆÇ Á¤ÀÇ */
+
+/* °ú¸ñ¸í Á¤ÀÇ */
+.course_title01 {  font-size: 11pt; text-decoration: none; color: #000000 ;  font-family: "µ¸¿ò", "µ¸¿òÃ¼" ;  font-weight: bold }
+
+
+.img {  border: #CDCCCC; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.img1 {  border: #CEC4C4; border-style: solid; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px}
+.board_bg {  font-size: 11px; text-decoration: none; background-attachment: fixed; background-image: url('/restaurant/nvimg/num_bg.gif'); background-repeat: no-repeat; text-align: center}
+
+.board_bgEN {  font-size: 11px; text-decoration: none; background-attachment: fixed; background-image: url('/restaurant/nvimg/num_bgEN.gif'); background-repeat: no-repeat; text-align: center}
+
+.text {  font-size: 8pt; line-height: 18px; color: #333333; text-decoration: none}
+
+.banner01 {  border: #B3B5B4; border-style: solid ; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+
+.bestrest_BG {  background-attachment: fixed; background-image: url('/Restaurant/BestRest/Img/bestBG.jpg'); background-repeat: no-repeat; background-position:  
+               left top; vertical-align: top; font-size: 8pt}
+
+.scrollbar {background-position: right bottom; scrollbar-face-color: #FFFFFF; scrollbar-shadow-color: #666666;scrollbar-highlight-color: #666666; scrollbar-3dlight-color: #FFFFFF; scrollbar-darkshadow-color: #FFFFFF; scrollbar-track-color: #FFFFFF;scrollbar-arrow-color: #FFFFFF; background-color:white; background-repeat:no-repeat; background-attachment:fixed}
+.contents {  font-family: "µ¸¿ò", "µ¸¿òÃ¼", "Arial"; font-size:9pt; line-height: 16pt; color: #333333; text-decoration: none}
+.unnamed1 {  font-size: large}
+.unnamed2 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: medium; font-weight: bold}
+
+

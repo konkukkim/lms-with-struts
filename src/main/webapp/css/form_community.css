@@ -1,0 +1,284 @@
+
+/* classroom 좌측메뉴  ===================================================*/
+.com_left_form {
+	height:34px;
+	width: 165x;
+	padding: 3px 0 5px 0;
+}
+
+/* left 크기변경(최대 165px) */
+.com_left_menu {
+	width: 153px;
+}
+
+.com_left_menulien {
+	background:#E4E4E4;
+	height:1px;
+}
+
+.com_left_pd {
+	height: 22px;
+	width: 153px;
+	padding: 4px 0 0 8px;
+}
+
+.com_l_menu { font-size:9pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum }
+a.com_l_menu:link { font-size:9pt;  text-decoration: none; color: #606060;}
+a.com_l_menu:visited { font-size:9pt;  text-decoration: none; color: #606060;}
+a.com_l_menu:active { font-size:9pt;  text-decoration: none; color: #606060;}
+a.com_l_menu:hover { font-size:9pt;  text-decoration: none; color: #5FB4AA;}
+
+.com_l_menu_on { font-size:9pt;  text-decoration: none; color: #5FB4AA ; font-family: 돋움, dotum }
+a.com_l_menu_on:link { font-size:9pt;  text-decoration: none; color: #5FB4AA; font-weight:bold;}
+a.com_l_menu_on:visited { font-size:9pt;  text-decoration: none; color: #5FB4AA; font-weight:bold;}
+a.com_l_menu_on:active { font-size:9pt;  text-decoration: none; color: #5FB4AA; font-weight:bold;}
+a.com_l_menu_on:hover { font-size:9pt;  text-decoration: none; color: #5FB4AA; font-weight:bold;}
+
+.com_l_menu_s { width: 90%; padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060 ; font-family: 돋움, dotum }
+.com_l_menu_s a:link { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060}
+.com_l_menu_s a:visited { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060}
+.com_l_menu_s a:active { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #606060}
+.com_l_menu_s a:hover { padding: 0 0 0 23px; font-size:8pt;  text-decoration: none; color: #5FB4AA;}
+
+
+.com_left_exit {
+	height: 32px;
+	width: 150px;
+	padding: 13px 0 50px 0;
+}
+
+/* 커뮤니티 content  ===================================================*/
+.com_content_form {
+	width: 711px;
+	padding: 0 0 25px 0;
+}
+
+.com_stit_title {
+	background: url(../img/1/title/stit_bg.gif);
+	padding: 11px 0 7px 2px;
+}
+
+.com_stit_history { background: url(../img/1/title/stit_bg.gif); padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: font-family: 돋움, dotum }
+.com_stit_history a:link { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: none}
+.com_stit_history a:visited { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #9b9b9b; padding-top: 0px; text-decoration: none}
+.com_stit_history a:hover { padding-right: 2px; padding-left: 0px; font-size: 11px; padding-bottom: 7px; color: #f05526; padding-top: 0px; text-decoration: none}
+
+
+.com_img {
+	background: url(../img/1/community/com_img.gif);
+	height:94px;
+}
+
+
+/* 타일틀과 컨텐츠사이 간격 조정... top 설정(기본 25px) */
+.com_content_top {
+	padding: 25px 0 0 0;
+}
+
+/* 게시판 위부분 */
+.com_bbs_top {
+	color :#0A357E;
+	font-weight:bold;
+	padding: 0 3px 6px 0;
+}
+
+/* 우리커뮤니티 메인 소개부분  ===================================================*/
+/* 검색부분 */
+.com_search01 {
+	padding: 0px 0px 13px 5px;
+}
+
+.com_search02 {
+	padding: 0px 0px 13px 0px;
+}
+
+
+.com_titform {
+	padding: 0px 0px 4px 2px;
+}
+
+.com_lien01 {
+	background:#2D9D92;
+	height:2px;
+	vertical-align:middle;
+}
+
+.com_lien02 {
+	background-image:url(../img/1/classroom/dot_lien01.gif);
+}
+
+.com_lien03 {
+	background:#2D9D92;
+	height:1px;
+	vertical-align:middle;
+}
+
+
+/* board-syle  ===================================================*/
+.com_tabtit {
+	padding: 0 0 7px 0;
+	font:13px;
+	font-weight:bold;
+	color:#007f80;
+	vertical-align:middle;
+}
+
+.com_tablien {
+	color :#000000;
+	background: url(../img/1/bbs/s_tablien.gif);
+	width:1px;
+	vertical-align:middle;
+}
+
+.com_tab01 {
+	background:#2D9D92;
+	height:2px;
+	vertical-align:middle;
+}
+
+.com_tab02 {
+	font-weight:bold;
+	background:#E5F4F2;
+	text-align:center;
+	vertical-align:middle;
+	height:30px;
+}
+
+.com_tab03 {
+	background:#E1E1E1;
+	height:1px;
+}
+
+.tab_over { background-color:#F0F8FF; }
+.tab_out { background-color:#FFFFFF; }
+
+.com_tab04 {
+	color :#606060;
+	vertical-align:middle;
+	height:27px;
+	padding: 0 10px 0 12px;
+}
+
+.com_tab04_cen {
+	color :#606060;
+	vertical-align:middle;
+	height:27px;
+	text-align:center;
+}
+
+.com_tab04g {
+	color :#606060;
+	background:#F6F6F6;
+	vertical-align:middle;
+	height:27px;
+	padding: 0 10px 0 12px;
+}
+
+.com_tab04g_cen {
+	color :#606060;
+	background:#F6F6F6;
+	vertical-align:middle;
+	height:27px;
+	text-align:center;
+}
+
+.com_tab05 {
+	background:#cbe8e8;
+	height:2px;
+}
+
+.com_bbs { text-decoration: none; color: #606060; font-family: 돋움, dotum }
+a.com_bbs:link { text-decoration: none; color: #606060;}
+a.com_bbs:visited { text-decoration: none; color: #2D9D92;}
+a.com_bbs:active { text-decoration: none; color: #2D9D92;}
+a.com_bbs:hover { text-decoration: underline; color: #2D9D92;}
+
+/* 버튼부분 */
+.s_list_btn {
+	padding: 10px 3px 20px 0;
+}
+
+/* 페이지 번호 1.2.3.4...... 부분 */
+.s_list {
+	padding: 10px 0 0 0;
+}
+
+/* 상세보기화면 탭부분 */
+.s_tab_view01 {
+	color :#606060;
+	font-weight:bold;
+	background:#F6F6F6;
+	text-align:center;
+	vertical-align:middle;
+	height:30px;
+}
+
+.s_tab_view01_01 {
+	color :#606060;
+	font-weight:bold;
+	background:#F6F6F6;
+	vertical-align:middle;
+	padding: 0 10px 0 20px;
+	height:30px;
+}
+
+.s_tab_view02 {
+	color :#606060;
+	vertical-align:middle;
+	height:30px;
+	padding: 0 10px 0 12px;
+}
+
+.s_tab_view03 {
+	color :#606060;
+	vertical-align:middle;
+	height:30px;
+	padding: 10px 10px 10px 12px;
+}
+/* 이전글, 다음글 상하 라인, 위탁과정 라인에도 쓰임....*/
+.s_tab_lien01 {
+	background:#448CC7;
+	height:1px;
+}
+
+.s_tab_lien02 {
+	background:#448CC7;
+	height:1px;
+}
+
+.com_text01 {
+	padding: 0 0 3px 0;
+	font-weight:bold;
+	color:#FF8637;
+}
+
+/* 신규리스트 내용부분*/
+.com_text02 {
+	color:#0585a7;
+}
+
+
+/*  FAQ ........  ===================================================*/
+.com_ttop {
+	background: url("../img/1/community/com_ttop.gif");
+	width:650;
+	height:16px;
+}
+
+.com_tbottom {
+	background: url("../img/1/community/com_tbottom.gif");
+	width:650;
+	height:16px;
+}
+
+.com_tbg {
+	background: url("../img/1/community/com_tbg.gif");
+	width:650;
+	line-height: 20pt;
+}
+
+.b_title02 { font-size:9pt;  text-decoration: none; color: #4E4E4E ; font-family: 돋움, dotum }
+a.b_title02:link { font-size:9pt;  text-decoration: none; color: #4E4E4E; }
+a.b_title02:visited { font-size:9pt;  text-decoration: none; color: #4E4E4E;}
+a.b_title02:active { font-size:9pt;  text-decoration: none; color: #4E4E4E;}
+a.b_title02:hover { font-size:9pt;  text-decoration: none; color: #5FB4AA;}
