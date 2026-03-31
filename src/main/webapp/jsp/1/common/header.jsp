@@ -553,7 +553,7 @@ a.onemenu:hover {color:#white; /*text-decoration:underline;*/}
   </div> 
   <a class="onemenu" href="http://www.junnodae.org/Main.cmd?cmd=infoShow&pMode=Help&pInfoNum=0">이용안내</a>
 </div>
-<img src="http://www.junnodae.org/img/login_mv4_0_0_2.jpg">
+<img src="/img/login_mv4_0_0_2.jpg">
 <%
 		}
 %>		
